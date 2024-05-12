@@ -30,6 +30,7 @@ curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,false);
 $data = curl_exec($ch);
 curl_close($ch);
 $json = json_decode($data);
+var_dump($json);exit;
 $url = $json->content->url;
 if($id == '3' || $id == '5' ||$id == '7' || $id == '9' || $id == '11' || $id == '13') {
     header('location:'.$url->sd);
