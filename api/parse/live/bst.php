@@ -142,14 +142,7 @@ $n = [
 date_default_timezone_set("Asia/Shanghai");
 $date = date('YmdH');
 $timestamp = substr(time(), 0, 9)-7;//intval((time()-50)/10);
-$stream = 'http://43.141.130.33/lnbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/'.$n[$id].'/'.$date.'/';
-//$stream = 'http://140.249.242.32/lnbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/'.$n[$id].'/'.$date.'/';
-//$stream = 'http://183.66.105.63/hljbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/'.$n[$id].'/'.$date.'/';
-//$stream = 'http://58.42.59.68/hljbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/'.$n[$id].'/'.$date.'/';
-//$stream = 'http://58.42.59.45/hljbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/'.$n[$id].'/'.$date.'/';
-//$stream = 'http://58.42.59.55/hljbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/'.$n[$id].'/'.$date.'/';
-//$stream = 'http://58.42.59.104/hljbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/'.$n[$id].'/'.$date.'/';
-//$stream = 'http://[2409:8c28:203:308:69::c]/hljbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/'.$n[$id].'/'.$date.'/';
+$stream = 'http://116.162.6.192:80/lnbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/'.$n[$id].'/'.$date.'/';
 $current = "#EXTM3U"."\r\n";
 $current.= "#EXT-X-VERSION:3"."\r\n";
 $current.= "#EXT-X-TARGETDURATION:3"."\r\n";
