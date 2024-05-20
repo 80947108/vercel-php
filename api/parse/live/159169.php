@@ -1,7 +1,7 @@
 <?php 
 $postfields = 'captcha=123'; 
 $cookies = "regimcode_162100bbs=123"; 
-$web1 = 'http://oy.oyxx-1.eu.org/p3p.php?rrw=1'; 
+$web1 = 'http://zuozhus.site/home/159169端口.php'; 
 $result = curl($web1, $cookies, $postfields); 
 preg_match('/>p3p端口：<a href="(.*?)"/', $result, $matches); 
 $web2 = $matches[1]; 
