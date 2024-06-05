@@ -1,56 +1,112 @@
 <?php
-error_reporting(0);
-header('Content-Type: application/vnd.apple.mpegurl');
-$id = $_GET["id"];
-$ids = array(
-    "dsxw" => "4gtv-4gtv152", //东森新闻台
-    "hsxw" => "4gtv-4gtv052", //华视新闻
-    "msxw" => "litv-ftv13", //民视新闻台
-    "tvbsxw" => "4gtv-4gtv072", //TVBS新闻
-    "tvbs" => "4gtv-4gtv073", //TVBS
-    "dscjxw" => "4gtv-4gtv153", //东森财经新闻台
-    "zsxw" => "4gtv-4gtv074", //中视新闻
-    "ztxw" => "4gtv-4gtv009", //中天新闻台
-    "hyxw" => "litv-longturn14", //寰宇新闻台
-    "msly" => "litv-ftv07", //民视旅游台
-    "yzly" => "litv-longturn17", //亚洲旅游台
-    "snhrjs" => "4gtv-4gtv013", //视纳华仁纪实频道
-    "jtdy" => "4gtv-4gtv061", //靖天电影台
-    "lhdy" => "litv-longturn03", //龙华电影台
-    "ymswdy" => "4gtv-4gtv011", //影迷数位电影台
-    "amc" => "4gtv-4gtv017", //AMC最爱电影
-);
-$keys = array(
-    "dsxw" => "avc1_2000000=3-mp4a_138000_zho=6", //东森新闻台
-    "hsxw" => "avc1_3000000=3-mp4a_133000_zho=2", //华视新闻
-    "msxw" => "avc1_2000000=3-mp4a_122000_zho=7", //民视新闻台
-    "tvbsxw" => "avc1_3000000=3-mp4a_130000_zho=2", //TVBS新闻
-    "tvbs" => "avc1_3000000=3-mp4a_130000_zho=2", //TVBS
-    "dscjxw" => "avc1_2000000=3-mp4a_129000=6", //东森财经新闻台
-    "zsxw" => "avc1_3000000=3-mp4a_116000_zho=2", //中视新闻
-    "ztxw" => "avc1_3000000=8-mp4a_136000_zho=7", //中天新闻台
-    "hyxw" => "avc1_2000000=3-mp4a_166000_zho=6", //寰宇新闻台
-    "msly" => "avc1_2000000=3-mp4a_134000_zho=7", //民视旅游台
-    "yzly" => "avc1_2936000=4-mp4a_128000=2", //亚洲旅游台
-    "snhrjs" => "avc1_2000000=3-mp4a_122000_zho=2", //视纳华仁纪实频道
-    "jtdy" => "avc1_2000000=3-mp4a_132000_zho=7", //靖天电影台
-    "lhdy" => "avc1_2936000=4-mp4a_127000=2", //龙华电影台
-    "ymswdy" => "avc1_2000000=3-mp4a_136000=6", //影迷数位电影台
-    "amc" => "avc1_2000000=3-mp4a_139000_zho=6", //AMC最爱电影
-);
-$time = time();
-$seq = intval(explode(".", strval(($time - 1420070500) / 4))[0]);
-$begin_ts = $seq * 4;
-$tss = 12; //切多少个ts
-$current = "#EXTM3U" . "\r\n";
-$current .= "#EXT-X-VERSION:3" . "\r\n";
-$current .= "#EXT-X-TARGETDURATION:4" . "\r\n";
-$current .= "#EXT-X-MEDIA-SEQUENCE:" . strval($seq) . "\r\n";
-for ($i = 0; $i < $tss; $i++) {
-    $current .= "#EXTINF:4," . "\r\n";
-    $current .= "http://wanjiatv.net/rps.php?type=tw4g&path={$id}/litv-pc/{$id}-avc1_6000000={$n[$id][0]}-mp4a_134000_zho={$n[$id][1]}-begin={$t}0000000-dur=40000000-seq={$timestamp}.ts" . "\r\n";
-    $timestamp++;
-    $t += 4;
-}
-echo $current;
-?>
+	/*
+	食用方法litv.php?id=4gtv-4gtv001
+	一般来说没声音调节第二个参数就行，从1-10.
+	*/
+	header('Content-Type: text/plain; charset=utf-8');
+	$id = isset($_GET['id'])?$_GET['id']:'litv-longturn14';
+	$n=array(
+  '4gtv-4gtv001' => [1, 6],//民視台灣台
+  '4gtv-4gtv003' => [1, 6],//民視第一台
+  '4gtv-4gtv004' => [1, 8],//民視綜藝台
+  '4gtv-4gtv006' => [1, 9],//豬哥亮歌廳秀
+  '4gtv-4gtv009' => [2, 7],//中天新聞台
+  '4gtv-4gtv010' => [1, 2],//非凡新聞台
+  '4gtv-4gtv011' => [1, 6],//影迷數位電影台
+  '4gtv-4gtv013' => [1, 2],//視納華仁紀實頻道
+  '4gtv-4gtv014' => [1, 5],//時尚運動X
+  '4gtv-4gtv018' => [1, 10],//達文西頻道
+  '4gtv-4gtv034' => [1, 6],//八大精彩台
+  '4gtv-4gtv039' => [1, 7],//八大綜藝台
+  '4gtv-4gtv040' => [1, 6],//中視
+  '4gtv-4gtv041' => [1, 6],//華視
+  '4gtv-4gtv042' => [1, 6],//公視戲劇
+  '4gtv-4gtv043' => [1, 6],//客家電視台
+  '4gtv-4gtv044' => [1, 8],//靖天卡通台
+  '4gtv-4gtv045' => [1, 6],//靖洋戲劇台
+  '4gtv-4gtv046' => [1, 8],//靖天綜合台
+  '4gtv-4gtv047' => [1, 8],//靖天日本台
+  '4gtv-4gtv048' => [1, 2],//非凡商業台
+  '4gtv-4gtv049' => [1, 8],//采昌影劇台
+  '4gtv-4gtv051' => [1, 6],//台視新聞
+  '4gtv-4gtv052' => [1, 8],//華視新聞
+  '4gtv-4gtv053' => [1, 8],//GINX Esports TV
+  '4gtv-4gtv054' => [1, 8],//靖天歡樂台
+  '4gtv-4gtv055' => [1, 8],//靖天映畫
+  '4gtv-4gtv056' => [1, 2],//台視財經
+  '4gtv-4gtv057' => [1, 8],//靖洋卡通台
+  '4gtv-4gtv058' => [1, 8],//靖天戲劇台
+  '4gtv-4gtv059' => [1, 6],//CLASSICA古典樂
+  '4gtv-4gtv061' => [1, 7],//靖天電影台
+  '4gtv-4gtv062' => [1, 8],//靖天育樂台
+  '4gtv-4gtv063' => [1, 6],//靖天國際台
+  '4gtv-4gtv064' => [1, 8],//中視菁采台
+  '4gtv-4gtv065' => [1, 8],//靖天資訊台
+  '4gtv-4gtv066' => [1, 2],//台視
+  '4gtv-4gtv067' => [1, 8],//TVBS精采台
+  '4gtv-4gtv068' => [1, 7],//TVBS歡樂台
+  '4gtv-4gtv070' => [1, 7],//愛爾達娛樂台
+  '4gtv-4gtv072' => [1, 2],//TVBS新聞
+  '4gtv-4gtv073' => [1, 8],//TVBS
+  '4gtv-4gtv074' => [1, 8],//中視新聞
+  '4gtv-4gtv076' => [1, 2],//CATCHPLAY電影台
+  '4gtv-4gtv077' => [1, 7],//TRACE Sport Stars
+  '4gtv-4gtv079' => [1, 2],//ARIRANG阿里郎頻道
+  '4gtv-4gtv080' => [1, 5],//中視經典台
+  '4gtv-4gtv082' => [1, 7],//TRACE Urban
+  '4gtv-4gtv083' => [1, 6],//Mezzo Live
+  '4gtv-4gtv084' => [1, 6],//國會頻道1台
+  '4gtv-4gtv085' => [1, 5],//國會頻道2台
+  '4gtv-4gtv101' => [1, 6],//智林體育台
+  '4gtv-4gtv102' => [1, 6],//東森購物1台
+  '4gtv-4gtv103' => [1, 6],//東森購物2台
+  '4gtv-4gtv104' => [1, 7],//第1商業台
+  '4gtv-4gtv109' => [1, 7],//中天亞洲台
+  '4gtv-4gtv152' => [1, 6],//東森新聞台
+  '4gtv-4gtv153' => [1, 6],//東森財經新聞台
+  '4gtv-4gtv155' => [1, 6],//民視
+  'litv-ftv03' => [1, 7],//VOA美國之音
+  'litv-ftv07' => [1, 7],//民視旅遊台
+  'litv-ftv09' => [1, 7],//民視影劇台
+  'litv-ftv10' => [1, 7],//半島國際新聞台
+  'litv-ftv13' => [1, 7],//民視新聞台
+  'litv-ftv15' => [1, 7],//i-Fun動漫台
+  'litv-ftv16' => [1, 2],//好消息
+  'litv-ftv17' => [1, 2],//好消息2台
+  'litv-longturn01' => [4, 2],//龍華卡通台
+  'litv-longturn03' => [5, 2],//龍華電影台
+  'litv-longturn04' => [5, 2],//博斯魅力台
+  'litv-longturn05' => [5, 2],//博斯高球台
+  'litv-longturn06' => [5, 2],//博斯高球二台
+  'litv-longturn07' => [5, 2],//博斯運動一台
+  'litv-longturn08' => [5, 2],//博斯運動二台
+  'litv-longturn09' => [5, 2],//博斯網球台
+  'litv-longturn10' => [5, 2],//博斯無限台
+  'litv-longturn11' => [5, 2],//龍華日韓台
+  'litv-longturn12' => [5, 2],//龍華偶像台
+  'litv-longturn13' => [4, 2],//博斯無限二台
+  'litv-longturn14' => [1, 6],//寰宇新聞台
+  'litv-longturn15' => [5, 2],//寰宇新聞台灣台
+  'litv-longturn17' => [5, 2],//亞洲旅遊台
+  'litv-longturn18' => [5, 2],//龍華戲劇台
+  'litv-longturn19' => [5, 2],//Smart知識台
+  'litv-longturn20' => [5, 2],//ELTV生活英語台
+  'litv-longturn21' => [5, 2],//龍華經典台
+  'litv-longturn23' => [5, 2],//寰宇財經台
+		);
+	$timestamp = intval(time()/4-355017625);
+	$t=$timestamp*4;
+	$current = "#EXTM3U"."\r\n";
+	$current.= "#EXT-X-VERSION:3"."\r\n";
+	$current.= "#EXT-X-TARGETDURATION:4"."\r\n";
+	$current.= "#EXT-X-MEDIA-SEQUENCE:{$timestamp}"."\r\n";
+	for ($i=0; $i<3; $i++) {
+    		$current.= "#EXTINF:4,"."\r\n";
+		$current.="https://litvpc-hichannel.cdn.hinet.net/live/pool/{$id}/litv-pc/{$id}-avc1_6000000={$n[$id][0]}-mp4a_134000_zho={$n[$id][1]}-begin={$t}0000000-dur=40000000-seq={$timestamp}.ts"."\r\n";
+    		$timestamp = $timestamp+1;
+		$t=$t+4;
+    		}
+	header('Content-Type: application/vnd.apple.mpegurl'); 
+	header('Content-Disposition: inline; filename='.$id.'.m3u8');
+	header('Content-Length: ' . strlen($current)); 
+   	echo $current;
