@@ -267,7 +267,7 @@ if (isset($cachedUrls[$userid]) && isset($cachedUrls[$userid][$id])) {
         "rand_str" => rand_str(10)
     ];
 
-    $authmd5 = md5(http_build_query($data) . 'GKpYMmZM8MCS525K');
+    $authmd5 = md5(http_build_query($data) . 's22G7JTmNr7JdBLu');
     $data["signature"] = $authmd5;
     $auth = http_build_query($data);
     $PostUrl = "https://player-api.yangshipin.cn/v1/player/auth";
@@ -286,7 +286,7 @@ if (isset($cachedUrls[$userid]) && isset($cachedUrls[$userid][$id])) {
     $input = generateInput($params);
     $info = 'yspappid:519748109;host:www.yangshipin.cn;protocol:https:;token:' . $apiToken . ';input:' . $input . '-' . $guid . '-' . $seq_id . '-' . $request_id . ';';
     $sign = md5($info);
-    $Yspticket = encrypt_aes_128_ctr($pid . "&" . $jsonts . "&" . $guid . "&519748109", "UbV8YxaMprtZ3T\$G", "gz%XnyPAaQxGwLYN");
+    $Yspticket = encrypt_aes_128_ctr($pid . "&" . $jsonts . "&" . $guid . "&519748109", "MB#9oKOYU2dBpDcu", "Yswd8@YtNNCAKRm7");
     $signData = md5(http_build_query($params) . $salt);
     $params["signature"] = $signData;
     $params = json_encode($params);
