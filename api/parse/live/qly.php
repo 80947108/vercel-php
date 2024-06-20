@@ -286,10 +286,9 @@ cctv1,6308
 凤凰资讯,6320
 */
 $arr = [
-    '119.188.155.36',
-    '116.162.6.192',
+
     '116.162.6.191',
-    '223.109.210.41',
+
 ];
 $ip = $arr[array_rand($arr)];
 $m3u8 = "http://{$ip}/1.v.smtcdns.net/zycfcdn.gdwlcloud.com/PLTV/88888888/224/322122{$id}/index.m3u8";
