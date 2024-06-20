@@ -131,7 +131,7 @@ function get_vurl($ids, $ctip)
     $seqId = 123;
     $hdr = ["Content-Type:application/x-www-form-urlencoded;charset=UTF-8", "Referer:https://www.yangshipin.cn/", "Cookie:guid={$guid};versionName=99.99.99;versionCode=999999;vplatform=109;platformVersion=Chrome;deviceModel=124;updateProtocol=1", "Yspappid:519748109", "X-FORWARDED-FOR:" . $ctip];
     $auth = "appid=ysp_pc&guid=" . $guid . "&pid=" . $pid . "&rand_str=" . $rand;
-    $auth = $auth . "&signature=" . md5($auth . 'kPEl8C5ZSe26IN57');
+    $auth = $auth . "&signature=" . md5($auth . 's22G7JTmNr7JdBLu');
     $token1 = cj_url("https://player-api.yangshipin.cn/v1/player/auth", $hdr, "", $auth);
     $token1_j = json_decode($token1);
     $token1 = $token1_j->data->token;
@@ -158,7 +158,7 @@ function get_vurl($ids, $ctip)
     $params = ["adjust" => 1, "appVer" => "V1.0.0", "app_version" => "V1.0.0", "cKey" => "{$ckey}", "channel" => "ysp_tx", "cmd" => "2", "cnlid" => "{$yid}", "defn" => "fhd", "devid" => "devid", "dtype" => "1", "encryptVer" => "8.1", "guid" => "{$guid}", "livepid" => "{$pid}", "otype" => "ojson", "platform" => "{$platform}", "rand_str" => "{$rand}", "sphttps" => "1", "stream" => "2"];
     $sign = md5(http_build_query($params) . $salt);
     $sdkinput = ["adjust" => 1, "app_version" => "V1.0.0", "appVer" => "V1.0.0", "channel" => "ysp_tx", "cKey" => "{$ckey}", "cmd" => "2", "cnlid" => "{$yid}", "defn" => "fhd", "devid" => "devid", "dtype" => "1", "encryptVer" => "8.1", "guid" => "{$guid}", "livepid" => "{$pid}", "otype" => "ojson", "platform" => "{$platform}", "sphttps" => "1", "stream" => "2"];
-    $yspticket = encrypt_aes_128_ctr($pid . "&" . $token1_ts . "&" . $guid . "&519748109", "kh*&pwlc&Zic5XAz", "j4baeXReLWtVV!py");
+    $yspticket = encrypt_aes_128_ctr($pid . "&" . $token1_ts . "&" . $guid . "&519748109", "MB#9oKOYU2dBpDcu", "Yswd8@YtNNCAKRm7");
     $params["signature"] = $sign;
     $postdata = json_encode($params);
     $seqId = 1;
