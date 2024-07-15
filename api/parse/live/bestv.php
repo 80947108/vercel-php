@@ -3,7 +3,7 @@ date_default_timezone_set("Asia/Shanghai");
 $id = isset($_GET['id'])?$_GET['id']:'dfyshd8m@8000000';
 $id = str_replace('@', '/', $id);
 $playseek = isset($_GET['playseek'])?$_GET['playseek']:'';
-$domain = 'http://116.162.6.192:80/1.v.smtcdns.net/lnbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com';
+$domain = 'http://203.205.137.42:80/1.h2.smtcdns.net/fjnetv51.live.bestvcdn.com.cn';
 if ($playseek != '') {
     $palyseek_arr = explode('-', $playseek);
     $s_time = $palyseek_arr[0];
