@@ -10,6 +10,7 @@
     { "src": "/",  "dest": "api/index.php" },
     { "src": "/live/(.*).php",  "dest": "api/parse/live/$1.php" },
     { "src": "/GH/(.*).m3u8",  "dest": "api/parse/live/gehua.php?id=$1" },
+    { "src": "/PBS/(.*).m3u8",  "dest": "api/parse/live/bjpbs.php?id=$1" },
     { "src": "/BST/(.*).m3u8",  "dest": "api/parse/live/bst.php?id=$1" },
     { "src": "/CQ/(.*).m3u8",  "dest": "api/parse/live/cqyx.php?id=$1" },
     { "src": "/OTV/(.*).m3u8",  "dest": "api/parse/live/otv.php?id=$1" },
