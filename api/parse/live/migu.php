@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin:*');
 error_reporting(-1);
 $id = isset($_GET['id']) ? $_GET['id'] : 'cctv1';
 $n = [
@@ -164,67 +165,66 @@ if (!empty($n[$id])) {
 } else {
     $contId = $id;
 }
+$cacheFileName = 'migu_signjson.json';//缓存创建的文件名称
 
-$jsonData = file_get_contents('migu.json');
-
-$datajson = json_decode($jsonData, true);
-
-
-$data = array(
-    "sourceID" => $datajson['sourceID'],
-    "appType" => $datajson['appType'],
-    "relayState" => $datajson['relayState'],
-    "captcha" => $datajson['captcha'],
-    "imgcodeType" => $datajson['imgcodeType'],
-    "isAsync" => $datajson['isAsync'],
-    "loginID" => $datajson['loginID'],
-    "enpassword" => $datajson['enpassword'],
-    "fingerPrint" => $datajson['fingerPrint'],
-    "fingerPrintDetail" => $datajson['fingerPrintDetail'],
-);
-
-$postData = http_build_query($data);
-
-$authnUrl = 'https://passport.migu.cn/authn';
-
-$config = array(
-    "Content-Type: application/x-www-form-urlencoded",
-    "User-Agent: MiguVideo/2500090320 (iPhone; iOS 15.1.1; Scale/2.00)"
-);
-
-$autjson = json_decode(get_data($authnUrl, $config, $postData));
-
-$miguToken = $autjson->result->token;
-
-$deviceId = md5(uniqid('', true));
-$timestamp = time();
-$loginType = 'PWD';
-$clientId = getUuid2();
-
-$signData = [
-    'miguToken' => $miguToken,
-    'deviceId' => $deviceId,
-    'timestamp' => $timestamp,
-    'loginType' => $loginType,
-];
-
-$play = "https://webapi.miguvideo.com/userCenterLogin/login/migutokenforencrypt?sign=abcde&signType=AES&clientId={$clientId}";
-
-$signpost = json_encode($signData);
-
-$signheader = array(
-    "Content-Type: application/json",
-    "User-Agent: MiguVideo/2500090320 (iPhone; iOS 15.1.1; Scale/2.00)"
-);
-
-$signjson = json_decode(get_data($play, $signheader, $signpost));
-
+if (file_exists($cacheFileName)) {
+	$signjson = json_decode(file_get_contents($cacheFileName));
+	$expiredOn = $signjson->userInfo->expiredOn;
+	$timestamp = ($expiredOn / 1000) - 86400;
+	$times = time();
+	if ($times > $timestamp) {
+		$Userid = '';
+	} else {
+		$Userid = $signjson->userInfo->userId;
+	}
+}
+if (empty($userid)) {
+	$jsonData = file_get_contents('migu.json');
+	$datajson = json_decode($jsonData, true);
+	$data = array(
+		"sourceID" => $datajson['sourceID'],
+		"appType" => $datajson['appType'],
+		"relayState" => $datajson['relayState'],
+		"captcha" => $datajson['captcha'],
+		"imgcodeType" => $datajson['imgcodeType'],
+		"isAsync" => $datajson['isAsync'],
+		"loginID" => $datajson['loginID'],
+		"enpassword" => $datajson['enpassword'],
+		"fingerPrint" => $datajson['fingerPrint'],
+		"fingerPrintDetail" => $datajson['fingerPrintDetail'],
+	);
+	$postData = http_build_query($data);
+	$authnUrl = 'https://passport.migu.cn/authn';
+	$config = array(
+		"Content-Type: application/x-www-form-urlencoded",
+		"User-Agent: MiguVideo/2500090320 (iPhone; iOS 15.1.1; Scale/2.00)"
+	);
+	$autjson = json_decode(get_data($authnUrl, $config, $postData));
+	$miguToken = $autjson->result->token;
+	$deviceId = md5(uniqid('', true));
+	$timestamp = time();
+	$loginType = 'PWD';
+	$clientId = getUuid2();
+	$signData = [
+		'miguToken' => $miguToken,
+		'deviceId' => $deviceId,
+		'timestamp' => $timestamp,
+		'loginType' => $loginType,
+	];
+	$play = "https://webapi.miguvideo.com/userCenterLogin/login/migutokenforencrypt?sign=abcde&signType=AES&clientId={$clientId}";
+	$signpost = json_encode($signData);
+	$signheader = array(
+		"Content-Type: application/json",
+		"User-Agent: MiguVideo/2500090320 (iPhone; iOS 15.1.1; Scale/2.00)"
+	);
+	$signjson = json_decode(get_data($play, $signheader, $signpost));
+	file_put_contents($cacheFileName, json_encode($signjson));
+}
 $Userid = $signjson->userInfo->userId;
 $Usertoken = $signjson->userInfo->userToken;
 $Sign = $signjson->sign;
 $Userinfo = json_encode($signjson->userInfo);
 $mobile = $signjson->userInfo->mobile;
-
 $timestamps = round(microtime(true) * 1000);
 $salt = substr($timestamps, 4, 6) . "96";
 $signID = getSign($contId);
@@ -234,14 +234,14 @@ $data = generateRandomString();
 $channel= "0116_25000000-99000-100300010010001";
 
 $playURL = "https://play.miguvideo.com/playurl/v1/play/playurl?audio=false&contId={$contId}&ott=true&dolby=true&drm=true&flvEnable=true&h265=true&isMultiView=true&isRaming=0&isbox=false&nt=4&os=15.1.1&ott=false&rateType=7&salt={$salt}&serialNo=0&sign={$signID}&startPlay=true&timestamp={$timestamps}&ua=iPhone13%2C3&vivid=1&vr=true&xavs2=true&xh265=false";
-
+//$playURL = "https://webapi.miguvideo.com/gateway/playurl/v3/play/playurl?audio=false&contId=63549114920221202001&ott=true&dolby=true&drm=true&flvEnable=true&h265=true&isMultiView=true&isRaming=0&isbox=false&nt=4&os=15.1.1&ott=false&rateType=7&salt={$salt}&serialNo=0&sign={$signID}&startPlay=true&timestamp={$timestamps}&ua=iPhone13%2C3&vivid=1&vr=true&xavs2=true&xh265=false";
 $headers = array(
     "Content-Type: application/json",
     "User-Agent: MiguVideo/2500090320 (iPhone; iOS 15.1.1; Scale/2.00)", // Set the User-Agent to simulate a browser
     "Userid:" . $Userid,
     "Usertoken:" . $Usertoken,
     "Sign:" . $Sign,
-    'Userinfo: ' . "$Userinfo",
+    "Userinfo: " . $Userinfo,
     "Mobile:" . $mobile,
     "Connection: keep-alive",
     "Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
@@ -258,9 +258,13 @@ $headers = array(
 $playjson = json_decode(get_data($playURL, $headers));
 
 $live = $playjson->body->urlInfo->url;
-
-// print_r($json);
-
+//print_r($playjson);
+if (isset($_GET['playseek'])) {
+	$playseek = $_GET['playseek'];
+	$starttime=explode('-', $playseek)[0];
+	$endtime=explode('-', $playseek)[1];
+	$live=$live."&playbackbegin=".$starttime."&playbackend=".$endtime;
+}
 header("Content-Type: application/vnd.apple.mpegURL");
 header('Location:' . $live);
 
