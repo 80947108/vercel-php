@@ -79,8 +79,8 @@ $n = [
 ];
 
 $userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3';
-$m3u8 = "http://118.144.105.51:81/live/$n[$id]/live.m3u8";
-$domain_prefix = "http://118.144.105.51:81/live/$n[$id]/";
+$m3u8 = "http://beijinglive.online.domybox.com:91/live/$n[$id]/live.m3u8";
+$domain_prefix = "http://beijinglive.online.domybox.com:91/live/$n[$id]/";
 header("Content-Type: application/vnd.apple.mpegurl");
 header("Content-Disposition: inline; filename=index.m3u8");
 
