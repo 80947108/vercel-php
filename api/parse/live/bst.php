@@ -142,7 +142,7 @@ $n = [
 date_default_timezone_set("Asia/Shanghai");
 $date = date('YmdH');
 $timestamp = substr(time(), 0, 9)-7;//intval((time()-50)/10);
-$stream = 'http://47.102.200.34:18081/live/program/live/'.$n[$id].'/'.$date.'/';
+$stream = 'http://117.161.12.116/live/program/live/'.$n[$id].'/'.$date.'/';
 $current = "#EXTM3U"."\r\n";
 $current.= "#EXT-X-VERSION:3"."\r\n";
 $current.= "#EXT-X-TARGETDURATION:3"."\r\n";
