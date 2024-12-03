@@ -4,9 +4,9 @@ date_default_timezone_set("Asia/Shanghai");
 $channel = empty($_GET['id']) ? "CCTV-1H265_4000" : trim($_GET['id']);
 $array = explode("_", $channel);
 if (isset($array[1])) {
-    $stream = "https://58.216.99.148:80/live2.rxip.sc96655.com/live,{$array[0]}_hls_pull_{$array[1]}K/";
+    $stream = "https://60.255.240.247:8090/live,{$array[0]}_hls_pull_{$array[1]}K/";
 } else {
-    $stream = "https://58.216.99.148:80/live2.rxip.sc96655.com/live,{$array[0]}_hls_pull_4000K/";
+    $stream = "https://60.255.240.247:8090/live,{$array[0]}_hls_pull_4000K/";
 }
 $timestamp = intval((time() - 100) / 6);
 $current = "#EXTM3U" . "\r\n";
