@@ -1,36 +1,44 @@
 <?php
-error_reporting(-1);
-$id = isset($_GET['id']) ? $_GET['id'] : '11342412'; //房间号
+error_reporting(0);
+$id = $_GET['id'];//房间号(lProfileRoom)
+if (empty($_GET['id'])) $id ="11342412";
 
-$h = array(
-    'Content-Type: application/x-www-form-urlencoded',
-    "Referer: https://www.huya.com/",
-    'Origin: https://www.huya.com',
-    'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0',
-);
-$bstrURL = 'https://www.huya.com/' . $id;
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $bstrURL);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HTTPHEADER, $h);
-curl_setopt($ch, CURLOPT_ENCODING, '');
-$data = curl_exec($ch);
-curl_close($ch);
-// echo $data;
-if (preg_match('/"sStreamName":"([^"]+)".*?"sFlvUrl":"([^"]+)".*?"sFlvUrlSuffix":"([^"]+)".*?"sFlvAntiCode":"([^"]+)"/s', $data, $matches)) {
+$c = ['tx','hw','hs','hy'];
+$c_rand  = $c[array_rand($c)];
+$n = [0,1,2,3];
+$n_rand  = $n[array_rand($n)];
 
+$roomurl = "https://mp.huya.com/cache.php?m=Live&do=profileRoom&roomid=$id";
+$json = json_decode(file_get_contents($roomurl),1);
+$data = $json["data"];
+$uid = $data['profileInfo']['uid'];
+$streamname = $data['stream']['baseSteamInfoList'][0]['sStreamName'];
 
-    $sStreamName = $matches[1];
-    // $sFlvUrl = $matches[2];
-    $sFlvUrl = "http://182.40.120.229/test-txdwk.flv.huya.com/src";
-    $sFlvUrlSuffix = $matches[3];
-    $sFlvAntiCode = $matches[4];
-    // echo $sHlsAntiCode;
-    $url = $sFlvUrl . '/' . $sStreamName . '.' . $sFlvUrlSuffix . '?' . $sFlvAntiCode;
+$url = $data['stream']['flv']['multiLine'][$n_rand]['url'];
+$burl = explode('?', $url)[0];
 
-    // print_r($url);
-    header("Content-Type: application/vnd.apple.mpegurl");
-    header("Location: $url");
-}
+$fm = "DWq8BcJ3h6DJt6TY_$0_$1_$2_$3";
+$seqid = strval(intval($uid) + intval(microtime(true) * 1000));
+$ctype = 'tars_wap';
+$t = '102';    
+$ss = md5("{$seqid}|{$ctype}|{$t}");
+$wsTime = dechex(time() + 21600);
+$fm = str_replace(["$0", "$1", "$2", "$3"], [$uid, $streamname, $ss, $wsTime], $fm);
+$wsSecret = md5($fm);
+$s = [];
+$s["wsSecret"] = $wsSecret;
+$s["wsTime"] = $wsTime;
+$s["ctype"] = $ctype;
+$s["seqid"] = $seqid;
+$s["uid"] = $uid;
+$s["fs"] = "bgct";
+$s["ver"] = "1";
+$s["t"] = $t;
+
+$p = http_build_query($s);
+
+$playurl = $burl.'?'.$p;
+
+header("location:".$playurl);
+//print_r($playurl);
+?>
