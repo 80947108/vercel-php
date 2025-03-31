@@ -49,7 +49,8 @@
     '4gtv-4gtv072' => [1, 2],//TVBS新聞
     '4gtv-4gtv073' => [1, 2],//TVBS
     '4gtv-4gtv074' => [1, 2],//中視新聞
-    '4gtv-4gtv076' => [1, 2],//CATCHPLAY電影台
+    '4gtv-4gtv075' => [1, 2],//鏡電視新聞台
+    '4gtv-4gtv076' => [1, 2],//亞洲旅遊台
     '4gtv-4gtv077' => [1, 7],//TRACE Sport Stars
     '4gtv-4gtv079' => [1, 2],//ARIRANG阿里郎頻道
     '4gtv-4gtv080' => [1, 6],//中視經典台
@@ -62,18 +63,21 @@
     '4gtv-4gtv103' => [1, 6],//東森購物2台
     '4gtv-4gtv104' => [1, 7],//第1商業台
     '4gtv-4gtv109' => [1, 6],//中天亞洲台
-    '4gtv-4gtv152' => [1, 6],//東森新聞台'
-    '4gtv-4gtv153' => [1, 6],//東森財經新聞台
+    '4gtv-4gtv152' => [1, 6],//東森新聞台
+    '4gtv-4gtv153' => [1, 2],//東森財經新聞台
     '4gtv-4gtv155' => [1, 6],//民視
+    '4gtv-4gtv156' => [1, 6],//寰宇新聞台灣台
+    '4gtv-4gtv158' => [5, 2],//寰宇財經台    
     'litv-ftv03' => [1, 7],//VOA美國之音
     'litv-ftv07' => [1, 7],//民視旅遊台
     'litv-ftv09' => [1, 2],//民視影劇台
     'litv-ftv10' => [1, 7],//半島國際新聞台
     'litv-ftv13' => [1, 7],//民視新聞台
-    'litv-ftv15' => [1, 7],//i-Fun動漫台
+    'litv-ftv15' => [1, 7],//影迷數位紀實台
     'litv-ftv16' => [1, 2],//好消息
     'litv-ftv17' => [1, 2],//好消息2台
-    'litv-longturn01' => [5, 4],//龍華卡通台
+    'litv-longturn01' => [1, 2],//龍華卡通台
+    'litv-longturn02' => [5, 2],//龍華洋片台
     'litv-longturn03' => [5, 6],//龍華電影台
     'litv-longturn04' => [5, 6],//博斯魅力台
     'litv-longturn05' => [5, 2],//博斯高球台
@@ -85,15 +89,12 @@
     'litv-longturn11' => [5, 2],//龍華日韓台
     'litv-longturn12' => [5, 2],//龍華偶像台
     'litv-longturn13' => [4, 2],//博斯無限二台
-    'litv-longturn14' => [1, 2],//寰宇新聞台
-    'litv-longturn15' => [5, 6],//寰宇新聞台灣台
-    'litv-longturn17' => [5, 2],//亞洲旅遊台
+    'litv-longturn14' => [4, 2],//寰宇新聞
     'litv-longturn18' => [5, 6],//龍華戲劇台
     'litv-longturn19' => [5, 6],//Smart知識台
     'litv-longturn20' => [5, 6],//ELTV生活英語台
     'litv-longturn21' => [5, 2],//龍華經典台
     'litv-longturn22' => [5, 2],//台灣戲劇台
-    'litv-longturn23' => [5, 2],//寰宇財經台  
     );
   $timestamp = intval(time()/4-355017625);
   $t=$timestamp*4;
@@ -103,11 +104,11 @@
   $current.= "#EXT-X-MEDIA-SEQUENCE:{$timestamp}"."\r\n";
   for ($i=0; $i<3; $i++) {
         $current.= "#EXTINF:4,"."\r\n";
-    $current.="https://litvpc-hichannel.cdn.hinet.net/live/pool/{$id}/litv-pc/{$id}-avc1_6000000={$n[$id][0]}-mp4a_134000_zho={$n[$id][1]}-begin={$t}0000000-dur=40000000-seq={$timestamp}.ts"."\r\n";
+    $current.="https://ntd-tgc.cdn.hinet.net/live/pool/{$id}/litv-pc/{$id}-avc1_6000000={$n[$id][0]}-mp4a_134000_zho={$n[$id][1]}-begin={$t}0000000-dur=40000000-seq={$timestamp}.ts"."\r\n";
         $timestamp = $timestamp+1;
     $t=$t+4;
         }
-  header('Content-Type: application/vnd.apple.mpegurl'); 
+  header('Content-Type: application/vnd.apple.mpegurl');
   header('Content-Disposition: inline; filename='.$id.'.m3u8');
-  header('Content-Length: ' . strlen($current)); 
+  header('Content-Length: ' . strlen($current));
      echo $current;
