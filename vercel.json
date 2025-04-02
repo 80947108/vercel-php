@@ -11,6 +11,7 @@
     { "src": "/live/(.*).php",  "dest": "api/parse/live/$1.php" },
     { "src": "/iptv/(.*)",  "dest": "api/parse/live/iptv.php?id=$1" },
     { "src": "/h/(.*)",  "dest": "api/parse/live/🔞.php?id=$1" },
+    { "src": "/DSJ/(.*)",  "dest": "api/parse/live/dsj.php?id=$1" },
     { "src": "/BFGD/(.*).m3u8",  "dest": "api/parse/live/bfgd.php?id=$1" },
     { "src": "/80947108/(.*)",  "dest": "api/parse/live/80947108.php?id=$1" },
     { "src": "/PLTV/8888/(.*)/(.*).m3u8",  "dest": "api/parse/live/$1.php?id=$2" },
