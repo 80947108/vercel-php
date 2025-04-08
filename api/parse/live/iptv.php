@@ -3,13 +3,13 @@
 $channels = [
 
 
-"Banana" => "http://m6z.cn/5zH2iy",//奧視香蕉臺
-"Amazing" => "http://m6z.cn/5HcPml",//奧視驚艷臺
-"Pandora" => "http://m6z.cn/5O34IA",//潘朵啦高畫質玩美台
+"Banana" => "http://18.svi-studio.com:80/live/176844830209/558261845324/4.m3u8",//奧視香蕉臺
+"Amazing" => "http://18.svi-studio.com:80/live/176844830209/558261845324/1.m3u8",//奧視驚艷臺
+"Pandora" => "http://18.svi-studio.com:80/live/176844830209/558261845324/3.m3u8",//潘朵啦高畫質玩美台
 "RAINBOW" => "http://m6z.cn/5VzhNh",//彩虹Movie台
-"Sonsee1" => "http://m6z.cn/5HcPld",//松視1臺
-"Sonsee2" => "http://suo.im/aeQT9",//松視2臺
-"Sonsee3" => "http://m6z.cn/5O34IK",//松視3臺
+"Sonsee1" => "http://18.svi-studio.com:80/live/176844830209/558261845324/5.m3u8",//松視1臺
+"Sonsee2" => "http://18.svi-studio.com:80/live/176844830209/558261845324/6.m3u8",//松視2臺
+"Sonsee3" => "http://18.svi-studio.com:80/live/176844830209/558261845324/20205.m3u8",//松視3臺
 "XZT" => "http://s.mrw.so/7DlBI",//写真臺
 "XZT1" => "https://luong.utako.moe/pigoo/index.m3u8",//写真臺
 "Jstar" => "http://suo.im/aD7Ry",//JStar極限台電影頻道
