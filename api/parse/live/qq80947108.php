@@ -32,9 +32,9 @@ $channels = [
 "NMGWS" => "https://livestream-bt.nmtv.cn/nmtv/3208526general.m3u8?txSecret=eb5a3102dd5406c7ffeddf560b024952&txTime=76B2F9A0",//内蒙古卫视
 
 "BJJSKJ8K" => "https://gdcucc.v1.mk/gdcucc/brtv8k.m3u8",//北京纪实科教8K
-"CHCDZ" => "https://gdcucc.v1.mk/gdcucc/chcdzdy.m3u8",//CHC动作电影
-"CHCJT" => "https://gdcucc.v1.mk/gdcucc/chcjtyy.m3u8",//CHC家庭影院
-"CHCYM" => "http://120.76.248.139/live/lunbo/ssdy.m3u8",//CHC影迷电影
+"CHCDZ" => "http://sport.pendy.dpdns.org/migu/644368714?token=BCDxUPC2aE0y0iz8JYzYhWA21b8DBPXm4Tw9nHe0T-ftD1MRmsBCXZPPiHXeDz7cNybVmmXGazeeaHKpxyYgEA",//CHC动作电影
+"CHCJT" => "http://sport.pendy.dpdns.org/migu/644368373?token=BCDxUPC2aE0y0iz8JYzYhWA21b8DBPXm4Tw9nHe0T-ftD1MRmsBCXZPPiHXeDz7cNybVmmXGazeeaHKpxyYgEA",//CHC家庭影院
+"CHCYM" => "http://sport.pendy.dpdns.org/migu/952383261?token=BCDxUPC2aE0y0iz8JYzYhWA21b8DBPXm4Tw9nHe0T-ftD1MRmsBCXZPPiHXeDz7cNybVmmXGazeeaHKpxyYgEA",//CHC影迷电影
 "SSDY" => "http://120.76.248.139/live/lunbo/ssdy.m3u8",//邵氏电影
 "CWJD" => "http://ali.hlspull.yximgs.com/live/awei_cwjd.flv",//重温经典
 "CWJD1" => "https://gdcucc.v1.mk/gdcucc/cwjd.m3u8",//重温经典
@@ -42,9 +42,9 @@ $channels = [
 "CWJD3" => "http://cdn3.132.us.kg/live/cwjd/stream.m3u8",//重温经典
 "CWJD4" => "https://live.cdn.com.mp/live/cwjd/stream.m3u8",//重温经典
 "FHDY" => "http://ali.hlspull.yximgs.com/live/awei_fhdy.flv",//凤凰电影
-"FHZW" => "http://43.129.81.169/qctv.fengshows.cn/live/0701pcc72.flv",//凤凰中文
-"FHZX" => "http://43.129.81.169/qctv.fengshows.cn/live/0701pin72.flv",//凤凰资讯
-"FHXG" => "http://43.129.81.169/qctv.fengshows.cn/live/0701phk72.flv",//凤凰香港
+"FHZW" => "http://203.205.191.53/qctv.fengshows.cn/live/0701pcc72.flv",//凤凰中文
+"FHZX" => "http://203.205.191.53/qctv.fengshows.cn/live/0701pin72.flv",//凤凰资讯
+"FHXG" => "http://203.205.191.53/qctv.fengshows.cn/live/0701phk72.flv",//凤凰香港
 "CGTN" => "https://0472.org/hls/cgtn.m3u8",//CGTN
 "CGTNJL" => "https://0472.org/hls/cgtnd.m3u8",//CGTN纪录
 "CGTNEY" => "https://0472.org/hls/cgtne.m3u8",//CGTN俄语
