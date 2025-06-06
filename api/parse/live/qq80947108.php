@@ -1,7 +1,7 @@
 <?php
 // 定义频道链接
 $channels = [
-"CCTV1" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003864351.m3u8",//CCTV1
+"CCTV1" => "https://live.junhao.mil.cn/rmt9502/3e6e7c5477314ec38f5e58e2a5c70024.m3u8?txSecret=57978fafb9c19880afa5c8687e8241d8&txTime=7A42BAFF",//CCTV1
 "CCTV2" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003870745.m3u8",//CCTV2
 "CCTV3" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003870746.m3u8",//CCTV3
 "CCTV4" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003870747.m3u8",//CCTV4
@@ -14,37 +14,46 @@ $channels = [
 "CCTV10" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003870753.m3u8",//CCTV10
 "CCTV11" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003870754.m3u8",//CCTV11
 "CCTV12" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003870755.m3u8",//CCTV12
-"CCTV13" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000004796248.m3u8",//CCTV13
+"CCTV13" => "	http://tencentplaygsm.gztv.com/live/jingsai.m3u8",//CCTV13
 "CCTV14" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003870756.m3u8",//CCTV14
 "CCTV15" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003870757.m3u8",//CCTV15
 "CCTV16" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000004972604.m3u8",//CCTV16
 "CCTV17" => "http://jilin-02.tosunsoft.com:35455/bptv/10000100000000050000000003870758.m3u8",//CCTV17
 
-"BJWS" => "http://my.tmos.cn:15181/chs002.m3u8",//北京卫视
-"ZJWS1" => "http://my.tmos.cn:15181/chs004.m3u8",//浙江卫视
-"JSWS" => "http://my.tmos.cn:15181/chs003.m3u8",//江苏卫视
-"GDWS" => "http://my.tmos.cn:15181/chs006.m3u8",//广东卫视
+"BEIJINGWS" => "http://my.tmos.cn:15181/chs002.m3u8",//北京卫视
+"ZHEJIANGWS1" => "http://my.tmos.cn:15181/chs004.m3u8",//浙江卫视
+"JIANGSUWS" => "http://my.tmos.cn:15181/chs003.m3u8",//江苏卫视
+"GUANGDONGWS" => "http://my.tmos.cn:15181/chs006.m3u8",//广东卫视
 "HLJWS" => "http://my.tmos.cn:15181/chs005.m3u8",//黑龙江卫视
-"ZJWS" => "https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8",//浙江卫视
-"QHWS" => "http://stream.qhbtv.com/qhws/sd/live.m3u8",//青海卫视
-"ADWS" => "http://stream.qhbtv.com/adws/sd/live.m3u8",//安多卫视
-"BTWS" => "https://liveout.btzx.com.cn/62ds9e/yil08g.m3u8",//兵团卫视
+"HLJWS1" => "https://idclive.hljtv.com:4430/live/hljws_own.m3u8",//黑龙江卫视
+"ZHEJIANGWS" => "https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8",//浙江卫视
+"JILINWS" => "https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/0533b55e42354f4f802bdec78e26b571/1.m3u8",//吉林卫视
+"HEBEIWS" => "http://event.pull.hebtv.com/jishi/weishi_tingyun.m3u8",//河北卫视
+"JIANGXIWS" => "http://local-live.jxtvcn.com.cn/live-jxtv/tv_jxtv1.m3u8",//江西卫视
+"SHAANXIWS" => "http://gxlive.snrtv.com/sxws-SD.m3u8",//陕西卫视
+"QINGHAIWS" => "http://stream.qhbtv.com/qhws/sd/live.m3u8",//青海卫视
+"ANDUOWS" => "http://stream.qhbtv.com/adws/sd/live.m3u8",//安多卫视
+"BINGTUANWS" => "https://liveout.btzx.com.cn/62ds9e/yil08g.m3u8",//兵团卫视
+"HAINANWS" => "https://liveout.btzx.com.cn/62ds9e/yil08g.m3u8",//海南卫视
 "NMGWS" => "https://livestream-bt.nmtv.cn/nmtv/3208526general.m3u8?txSecret=eb5a3102dd5406c7ffeddf560b024952&txTime=76B2F9A0",//内蒙古卫视
 
 "BJJSKJ8K" => "https://gdcucc.v1.mk/gdcucc/brtv8k.m3u8",//北京纪实科教8K
-"CHCDZ" => "http://sport.pendy.dpdns.org/migu/644368714?token=BCDxUPC2aE0y0iz8JYzYhWA21b8DBPXm4Tw9nHe0T-ftD1MRmsBCXZPPiHXeDz7cNybVmmXGazeeaHKpxyYgEA",//CHC动作电影
-"CHCJT" => "http://sport.pendy.dpdns.org/migu/644368373?token=BCDxUPC2aE0y0iz8JYzYhWA21b8DBPXm4Tw9nHe0T-ftD1MRmsBCXZPPiHXeDz7cNybVmmXGazeeaHKpxyYgEA",//CHC家庭影院
-"CHCYM" => "http://sport.pendy.dpdns.org/migu/952383261?token=BCDxUPC2aE0y0iz8JYzYhWA21b8DBPXm4Tw9nHe0T-ftD1MRmsBCXZPPiHXeDz7cNybVmmXGazeeaHKpxyYgEA",//CHC影迷电影
+"CHCDZ" => "http://39.164.174.139:5000/nl.m3u8?id=CHCDZDYHD",//CHC动作电影
+"CHCJT" => "http://39.164.174.139:5000/nl.m3u8?id=CHCJTYYHD",//CHC家庭影院
+"CHCYM" => "http://39.164.174.139:5000/nl.m3u8?id=CHCYMDYHD",//CHC影迷电影
+"FHDY" => "http://iot-mqqt.111yao.cn:8080/live/diyp_fhdy.m3u8",//凤凰电影
 "SSDY" => "http://120.76.248.139/live/lunbo/ssdy.m3u8",//邵氏电影
 "CWJD" => "http://ali.hlspull.yximgs.com/live/awei_cwjd.flv",//重温经典
 "CWJD1" => "https://gdcucc.v1.mk/gdcucc/cwjd.m3u8",//重温经典
 "CWJD2" => "http://cdn3.163189.xyz/live/cwjd/stream.m3u8",//重温经典
 "CWJD3" => "http://cdn3.132.us.kg/live/cwjd/stream.m3u8",//重温经典
 "CWJD4" => "https://live.cdn.com.mp/live/cwjd/stream.m3u8",//重温经典
-"FHDY" => "http://ali.hlspull.yximgs.com/live/awei_fhdy.flv",//凤凰电影
 "FHZW" => "http://203.205.191.53/qctv.fengshows.cn/live/0701pcc72.flv",//凤凰中文
 "FHZX" => "http://203.205.191.53/qctv.fengshows.cn/live/0701pin72.flv",//凤凰资讯
 "FHXG" => "http://203.205.191.53/qctv.fengshows.cn/live/0701phk72.flv",//凤凰香港
+"LHWS" => "http://1033946631.cloudvdn.com/a.m3u8?domain=live-hdl.macaulotustv.com&player=1&streamid=lotustv:lotustv/macaulotustv&v3=1",//莲花卫视
+"LHWS1" => "http://live-hdl.macaulotustv.com/lotustv/macaulotustv.m3u8",//莲花卫视
+"LHWS2" => "http://live-hls.macaulotustv.com/lotustv/macaulotustv.m3u8",//莲花卫视
 "CGTN" => "https://0472.org/hls/cgtn.m3u8",//CGTN
 "CGTNJL" => "https://0472.org/hls/cgtnd.m3u8",//CGTN纪录
 "CGTNEY" => "https://0472.org/hls/cgtne.m3u8",//CGTN俄语
