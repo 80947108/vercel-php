@@ -23,6 +23,8 @@ $channels = [
 "CCTV16" => "http://jilin-02.tosunsoft.com:35455/nptv/cctv16.m3u8",//CCTV16
 "CCTV17" => "http://jilin-02.tosunsoft.com:35455/mgtv/673168256.m3u8",//CCTV17
 "CCTV1-1" => "https://live.junhao.mil.cn/rmt9502/3e6e7c5477314ec38f5e58e2a5c70024.m3u8?txSecret=57978fafb9c19880afa5c8687e8241d8&txTime=7A42BAFF",//CCTV1
+"CCTV1-2" => "https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream05/streamPlaylist.m3u8?",//CCTV1
+"CCTV1-3" => "https://cdn5.163189.xyz/live/cctv1/stream.m3u8",//CCTV1
 "CCTV13-1" => "http://tencentplaygsm.gztv.com/live/jingsai.m3u8",//CCTV13
 
 
@@ -40,7 +42,7 @@ $channels = [
 "QINGHAIWS" => "http://stream.qhbtv.com/qhws/sd/live.m3u8",//青海卫视
 "ANDUOWS" => "http://stream.qhbtv.com/adws/sd/live.m3u8",//安多卫视
 "BINGTUANWS" => "https://liveout.btzx.com.cn/62ds9e/yil08g.m3u8",//兵团卫视
-"HAINANWS" => "https://liveout.btzx.com.cn/62ds9e/yil08g.m3u8",//海南卫视
+"HAINANWS" => "https://livelyws.chinamcache.com/lyws/zb03.m3u8",//海南卫视
 "NMGWS" => "https://livestream-bt.nmtv.cn/nmtv/3208526general.m3u8?txSecret=eb5a3102dd5406c7ffeddf560b024952&txTime=76B2F9A0",//内蒙古卫视
 
 "BJJSKJ8K" => "https://gdcucc.v1.mk/gdcucc/brtv8k.m3u8",//北京纪实科教8K
