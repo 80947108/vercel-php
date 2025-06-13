@@ -113,12 +113,12 @@ $channels = [
 
 
 
-"Banana" => "https://heyunfei.eu.org/error.mp4",//奧視香蕉臺
-"Amazing" => "http://ali.hlspull.yximgs.com:80/live/e048a898c4c49f406908ec43acd18a8b.flv",//奧視驚艷臺
-"Pandora" => "http://ali.hlspull.yximgs.com:80/live/3407eebb4577b2ad0ac405db2bcff88f.flv",//潘朵啦高畫質玩美台
-"RAINBOW" => "http://ali.hlspull.yximgs.com:80/live/654e1850f657d7c43ff4d6b5ccafa89e.flv",//彩虹Movie台
-"Sonsee1" => "http://ali.hlspull.yximgs.com:80/live/b8c91a923da630c95797479826b2fa3e.flv",//松視1臺
-"Sonsee2" => "https://heyunfei.eu.org/error.mp4",//松視2臺
+"Banana" => "http://ali.hlspull.yximgs.com:80/live/dbb838131eb896a3b3a3da06a939820f.flv",//奧視香蕉臺
+"Amazing" => "http://ali.hlspull.yximgs.com:80/live/a37cb0a2f223d01922685685cba64b2e.flv",//奧視驚艷臺
+"Pandora" => "http://ali.hlspull.yximgs.com:80/live/6a265a5b9f8d93b3adc44b13f952f90d.flv",//潘朵啦高畫質玩美台
+"RAINBOW" => "http://ali.hlspull.yximgs.com:80/live/115197608906fed2c16d2a52e98314dc.flv",//彩虹Movie台
+"Sonsee1" => "http://ali.hlspull.yximgs.com:80/live/52f274c1bedf4791f95ab9601f0700ac.flv",//松視1臺
+"Sonsee2" => "http://ali.hlspull.yximgs.com:80/live/d46ef0cd7365e99f126ed5431bd2af97.flv",//松視2臺
 "Sonsee3" => "http://ali.hlspull.yximgs.com:80/live/d19ca6e6b19c9bf461d861dafaf356c6.flv",//松視3臺
 "XZT" => "http://ali.hlspull.yximgs.com:80/live/e1d0b7c095d39aca00e75858c7485f4d.flv",//写真臺
 "XZT1" => "https://luong.utako.moe/pigoo/index.m3u8",//写真臺
