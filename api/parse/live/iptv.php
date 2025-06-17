@@ -3,19 +3,19 @@
 $channels = [
 
 
-"Banana" => "http://18.svi-studio.com:80/live/176844830209/558261845324/4.m3u8",//奧視香蕉臺
-"Amazing" => "http://18.svi-studio.com:80/live/176844830209/558261845324/1.m3u8",//奧視驚艷臺
-"Pandora" => "http://18.svi-studio.com:80/live/176844830209/558261845324/3.m3u8",//潘朵啦高畫質玩美台
-"RAINBOW" => "http://m6z.cn/5VzhNh",//彩虹Movie台
-"Sonsee1" => "http://18.svi-studio.com:80/live/176844830209/558261845324/5.m3u8",//松視1臺
-"Sonsee2" => "http://18.svi-studio.com:80/live/176844830209/558261845324/6.m3u8",//松視2臺
-"Sonsee3" => "http://18.svi-studio.com:80/live/176844830209/558261845324/20205.m3u8",//松視3臺
-"XZT" => "http://s.mrw.so/7DlBI",//写真臺
-"XZT1" => "https://luong.utako.moe/pigoo/index.m3u8",//写真臺
-"Jstar" => "http://suo.im/aD7Ry",//JStar極限台電影頻道
-"HAPPY" => "http://suo.im/7emO2",//HAPPY頻道
-"RainbowE" => "http://m6z.cn/635uQm",//彩虹E台
-"KChannel" => "http://s.mrw.so/aZtoi",//K頻道
+"Banana" => "https://heyunfei.eu.org/error.mp4",//奧視香蕉臺
+"Amazing" => "https://heyunfei.eu.org/error.mp4",//奧視驚艷臺
+"Pandora" => "https://heyunfei.eu.org/error.mp4",//潘朵啦高畫質玩美台
+"RAINBOW" => "https://heyunfei.eu.org/error.mp4",//彩虹Movie台
+"Sonsee1" => "https://heyunfei.eu.org/error.mp4",//松視1臺
+"Sonsee2" => "https://heyunfei.eu.org/error.mp4",//松視2臺
+"Sonsee3" => "https://heyunfei.eu.org/error.mp4",//松視3臺
+"XZT" => "https://heyunfei.eu.org/error.mp4",//写真臺
+"XZT1" => "https://heyunfei.eu.org/error.mp4",//写真臺
+"Jstar" => "https://heyunfei.eu.org/error.mp4y",//JStar極限台電影頻道
+"HAPPY" => "https://heyunfei.eu.org/error.mp4",//HAPPY頻道
+"RainbowE" => "https://heyunfei.eu.org/error.mp4",//彩虹E台
+"KChannel" => "https://heyunfei.eu.org/error.mp4",//K頻道
 
 "A1" => "http://190.11.225.124:5000/live/playboy_hd/playlist.m3u8",//花花公子
 "A2" => "http://88.212.7.11/live/test_desire_hd_hevc/playlist.m3u8",//DigitalDesire
