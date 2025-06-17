@@ -115,19 +115,19 @@ $channels = [
 
 
 
-"Banana" => "http://ali.hlspull.yximgs.com:80/live/dbb838131eb896a3b3a3da06a939820f.flv",//奧視香蕉臺
-"Amazing" => "http://ali.hlspull.yximgs.com:80/live/a37cb0a2f223d01922685685cba64b2e.flv",//奧視驚艷臺
-"Pandora" => "http://ali.hlspull.yximgs.com:80/live/6a265a5b9f8d93b3adc44b13f952f90d.flv",//潘朵啦高畫質玩美台
-"RAINBOW" => "http://ali.hlspull.yximgs.com:80/live/115197608906fed2c16d2a52e98314dc.flv",//彩虹Movie台
-"Sonsee1" => "http://ali.hlspull.yximgs.com:80/live/52f274c1bedf4791f95ab9601f0700ac.flv",//松視1臺
-"Sonsee2" => "http://ali.hlspull.yximgs.com:80/live/d46ef0cd7365e99f126ed5431bd2af97.flv",//松視2臺
-"Sonsee3" => "http://ali.hlspull.yximgs.com:80/live/d19ca6e6b19c9bf461d861dafaf356c6.flv",//松視3臺
-"XZT" => "http://ali.hlspull.yximgs.com:80/live/e1d0b7c095d39aca00e75858c7485f4d.flv",//写真臺
+"Banana" => "http://ali.hlspull.yximgs.com:80/live/5f9475d108a8dc2a4c6f3645b54363bc.flv",//奧視香蕉臺
+"Amazing" => "http://ali.hlspull.yximgs.com:80/live/8380a44e9972f6ba846596ad36d48ca2.flv",//奧視驚艷臺
+"Pandora" => "http://ali.hlspull.yximgs.com:80/live/17a80b1d82886ec94058d087e01e9232.flv",//潘朵啦高畫質玩美台
+"RAINBOW" => "http://ali.hlspull.yximgs.com:80/live/29da97373c682cfe7543b56b4af69f72.flv",//彩虹Movie台
+"Sonsee1" => "http://ali.hlspull.yximgs.com:80/live/c71885f5a6b7ac11130fd9373a3a63d4.flv",//松視1臺
+"Sonsee2" => "https://heyunfei.eu.org/error.mp4",//松視2臺
+"Sonsee3" => "http://ali.hlspull.yximgs.com:80/live/aeddb51000264ddb31c31857a59b4aa1.flv",//松視3臺
+"XZT" => "http://ali.hlspull.yximgs.com:80/live/5bcf75a5e2b0610a5abc7d8e448d63b7.flv",//写真臺
 "XZT1" => "https://luong.utako.moe/pigoo/index.m3u8",//写真臺
-"Jstar" => "http://ali.hlspull.yximgs.com:80/live/2d7b99b886a1d12286c641d11cb0b283.flv",//JStar極限台電影頻道
-"HAPPY" => "http://ali.hlspull.yximgs.com:80/live/98f94700935912b511a14422039d3d05.flv",//HAPPY頻道
-"RainbowE" => "http://ali.hlspull.yximgs.com:80/live/0377d6869f56f7af77f91da3714f3e84.flv",//彩虹E台
-"KChannel" => "http://ali.hlspull.yximgs.com:80/live/9a09cfd14a8b1ad18dbd61f286fa81b8.flv",//K頻道
+"Jstar" => "http://ali.hlspull.yximgs.com:80/live/787cec4f8bc06f65a62d74be12c5d4f9.flv",//JStar極限台電影頻道
+"HAPPY" => "http://ali.hlspull.yximgs.com:80/live/c49bb80dd8fa1b2f5bed5c01c2a2d288.flv",//HAPPY頻道
+"RainbowE" => "http://ali.hlspull.yximgs.com:80/live/b0f527dc6600fa6f7d1d555bcdbd2762.flv",//彩虹E台
+"KChannel" => "http://ali.hlspull.yximgs.com:80/live/2cbddd5fba2369199661adb81a3b8079.flv",//K頻道
 
 
 
