@@ -143,12 +143,19 @@ $n = [
     "qsjl" => ["qsjlHD"], //求索纪录
     "cwjd" => ["cwjdHD"], //重温经典
 ];
+if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $onlineip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+    $onlineip = $_SERVER['REMOTE_ADDR'];
+}
 
 $cacheFileName = 'url_cache_cqn_all.json';
 $cachedUrls = [];
 
 $headers = [
     'user-agent: Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_2 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7D11 Safari/528.16',
+    // 'x-forwarded-for:' . $onlineip,
+    // 'client-ip:' . $onlineip,
 ];
 if (file_exists($cacheFileName)) {
     $cachedUrls = json_decode(file_get_contents($cacheFileName), true);
@@ -183,6 +190,8 @@ if (isset($cachedUrls[$id])) {
         'timestamps:' . $timestamps,
         'Content-Type: application/json;charset=utf-8',
         'user-agent: Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_2 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7D11 Safari/528.16',
+        // 'x-forwarded-for:' . $onlineip,
+        // 'client-ip:' . $onlineip,
     ];
     $url = json_decode(get_data($url, $header_4));
     $codes = isset($url->data->result->protocol[0]->transcode[0]->url) ? $url->data->result->protocol[0]->transcode[0]->url : '';
@@ -190,36 +199,10 @@ if (isset($cachedUrls[$id])) {
     if (!$codes) {
         echo 'Error: No video URL found in response';
     }
-
-    $hosts = [
-        'live.cbncdn.cn:80:118.24.228.117'
-    ];
-
-    $channels = [
-        "byte.live.cbncdn.cn",
-        "live.cbncdn.cn",
-    ];
-
-    do {
-        $finalUrl = get_data($codes, $headers, $hosts);
-
-        $domain = parse_url($finalUrl)['host'];
-
-        if (in_array($domain, $channels)) {
-            $codes = preg_replace("/{$domain}/", "live.cbncdn.cn", $finalUrl);
-        } else {
-            ob_clean();
-            $cachedUrls[$id] = [
-                'url' => $finalUrl
-            ];
-
-            file_put_contents($cacheFileName, json_encode($cachedUrls));
-
             header("Content-Type: application/vnd.apple.mpegurl");
-            header('Location: ' . $finalUrl);
+            header('Location: ' . $codes);
             exit;
-        }
-    } while (true);
+
 }
 function get_data($url, $header, $host = null)
 {
@@ -251,7 +234,7 @@ function get_http_response_code($url, $header)
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 1);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 1); 
     curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
     curl_exec($ch);
     $httpResponseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
