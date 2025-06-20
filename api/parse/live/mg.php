@@ -1,273 +1,169 @@
 <?php
-
-$n = [
-
-    'cctv1' => 'wd_r2/cctv/cctv1hd/2500', //CCTV1综合HD
-
-    'cctv2' => 'wd_r2/cctv/cctv2hd/3000', //CCTV2财*HD
-
-    'cctv3' => 'wd_r2/ocn/cctv3hd/3000', //CCTV3综艺HD
-
-    'cctv4' => 'wd_r2/cctv/cctv4hd/3000', //CCTV4中文国际HD
-
-    'cctv4o' => 'migu/kailu/20200324/cctv4ouhd/57', //CCTV4中文国际-欧洲HD
-
-    'cctv4a' => 'migu/kailu/20200324/cctv4meihd/57', //CCTV4中文国际-美洲HD
-
-    'cctv5' => 'wd_r2/cctv/cctv5hdnew/2500', //CCTV5体育HD
-
-    'cctv5p' => 'wd_r2/cctv/cctv5plusnew/2500', //CCTV5+体育赛事HD
-
-    'cctv6' => 'wd_r2/ocn/cctv6hd/3000', //CCTV6电影HD
-
-    'cctv7' => 'migu/kailu/20200324/cctv7hd/57', //CCTV7国防军事HD
-
-    'cctv8' => 'wd_r2/ocn/cctv8hd/3000', //CCTV8电视剧HD
-
-    'cctv9' => 'migu/kailu/20200324/cctv9hd/57', //CCTV9纪录HD
-
-    'cctv10' => 'wd_r2/ocn/cctv10hd/3000', //CCTV10科教HD
-
-    'cctv11' => 'migu/kailu/cctv11hd/57/20200103', //CCTV11戏曲HD
-
-    'cctv12' => 'migu/kailu/20200324/cctv12hd/57', //CCTV12社会与法HD
-
-    'cctv13' => 'migu/kailu/cctv13/57/20220913', //CCTV13新闻
-
-    'cctv14' => 'wd_r2/ocn/cctv14hd/3000', //CCTV14少儿HD
-
-    'cctv15' => 'migu/kailu/20200324/cctv15hd/57', //CCTV15音乐HD
-
-    'cctv17' => 'migu/kailu/20200324/cctv17hd/57', //CCTV17农村农业HD
-
-    'lgs' => 'migu/kailu/cctvlaogushi/50/20231109', //种养新影-老故事
-
-    'fxzl' => 'wd_r3/cnr/faxianzhilv/2000', //种养新影-发现之旅
-
-    'zxs' => 'migu/kailu/20210415/cctvzhongxuesheng/51', //种养新影-中学生
-
-    'cgtn' => 'envivo_x/2018/SD/cctvnews/1000', //CGTN
-
-    'cgtnjl' => 'envivo_v/2018/SD/cctv/doc/1000', //CGTN纪录
-
-    'cgtna' => 'envivo_v/SD/cctv/alabo/1000', //CGTN阿拉伯语
-
-    'cgtnf' => 'envivo_v/2018/SD/cctv/fayu/1000', //CGTN法语
-
-    'cgtne' => 'envivo_v/2018/SD/cctv/xibanya/1000', //CGTN西班牙语
-
-    'cgtnr' => 'envivo_v/2018/SD/cctv/eyu/1000', //CGTN俄语
-
-    'chcjtyy' => 'wd_r3/cnr/chcjtyy/3000', //CHC家庭影院
-
-    'chcdzdy' => 'wd_r1/2018/gesee/chcdzdy/600', //CHC动作电影
-
-    'dfws' => 'wd_r4/dfl/dongfangwshd/3000', //东方卫视HD
-
-    'cqws' => 'envivo_x/2018/SD/chongqing/1000', //重庆卫视
-
-    'jlws' => 'envivo_v/2018/SD/jilin/1000', //吉林卫视
-
-    'lnws' => 'wd_r2/ocn/liaoningwshd/3000', //辽宁卫视HD
-
-    'nmws' => 'envivo_w/2018/SD/neimeng/1000', //内蒙古卫视
-
-    'nxws' => 'envivo_x/2018/SD/ningxia/1000', //宁夏卫视
-
-    'gsws' => 'envivo_v/2018/SD/gansu/1000', //甘肃卫视
-
-    'qhws' => 'envivo_w/2018/SD/qinghai/1000', //青海卫视
-
-    'sxws' => 'migu/kailu/shan3xiws/57/20220809', //陕西卫视
-
-    'sdws' => 'wd-shandonghd-1200', //山东卫视HD
-
-    'hnws' => 'wd-henanwssd-600', //河南卫视
-
-    'hubws' => 'wd_r2/2018/ocn/hubeiwshd/2000', //湖北卫视HD
-
-    'hunws' => 'wd-hunanhd-2500', //湖南卫视HD
-
-    'jxws' => 'migu/kailu/jxwshd/57/20190820', //江西卫视HD
-
-    'jsws' => 'wd_r2/cctv/jiangsuhd/2500', //江苏卫视HD
-
-    'gdws' => 'ws_w/gdws/gdws3000/3000', //广东卫视HD
-
-    'dwqws' => 'wd_r3/2018/nfmedia/nfws/1000', //大湾区卫视
-
-    'gxws' => 'wd-guangxiwssd-600', //广西卫视
-
-    'ynws' => 'envivo_x/2018/SD/yunnan/1000', //云南卫视
-
-    'gzws' => 'wd-guizhouwssd-600', //贵州卫视
-
-    'xjws' => 'wd-xinjiangwssd-600', //新疆卫视
-
-    'xzws' => 'envivo_x/2018/SD/xizang/1000', //西藏卫视
-
-    'hinws' => 'envivo_x/SD/lvyou/711', //海南卫视
-
-    'shdy' => 'wd_r4/peoplecn/shdiaoyu/1200', //四海钓鱼
-
-    'shxwzh' => 'wd_r4/dfl/xinwenzonghehd/3000', //上海新闻综合
-
-    'dycj' => 'wd_r1/2018/bestv/dycj/1000', //第一财*
-
-    'dfys' => 'wd_r4/dfl/dianshijuhd/3000', //东方影视
-
-    'shjs' => 'wd_r2/ocn/jspdhd/3000', //上海纪实人文
-
-    'shics' => 'wd_r4/dfl/waiyusd/600', //上海ICS
-
-    'fztd' => 'migu/kailu/fztdhd/57/20230411', //法治天地
-
-    'hxjc' => 'migu/kailu/hxjchd/57/20230411', //欢笑剧场
-
-    'ly' => 'migu/kailu/leyouhd/57/20230411', //乐游HD
-
-    'mlzq' => 'migu/kailu/mlzuhd/57/20230411', //魅力足球
-
-    'jbty' => 'migu/kailu/jinbaotyhd/57/20230411', //劲爆体育
-
-    'yxfy' => 'wd_r2/ocn/youxifengyunhd/1200', //游戏风云
-
-    'qcxj' => 'migu/kailu/qicaixjhd/51/20230411', //七彩戏剧
-
-    'lttv' => 'migu/kailu/linyaodst/51/20191206', //临洮电视台 甘肃
-
-    'sdjy' => 'envivo_v/2018/SD/shandongedu/1000', //SDETV山东教育
-
-    'jyjs' => 'wd_r2/cctv/jinyingjishi/1200', //金鹰纪实
-
-    'jscs' => 'wd_r2/jstv/jschengshi/600', //江苏城市
-
-    'jszy' => 'wd_r2/jstv/jszongyi/600', //江苏综艺
-
-    'jsxw' => 'wd_r2/jstv/jsgonggong/600', //江苏新闻
-
-    'jsjy' => 'wd_r2/jstv/jsjiaoyu/600', //江苏教育
-
-    'jsgj' => 'wd_r2/jstv/jsguoji/600', //江苏国际
-
-    'jsys' => 'wd_r2/jstv/jsyingshi/600', //江苏影视
-
-    'jsty' => 'wd_r2/jstv/jstiyu/600', //江苏体育休闲
-
-    'ymkt' => 'wd_r2/jstv/ymkt/600', //优漫卡通
-
-   'njxwzh' => 'migu/kailu/nanjingxwzh/50/20230719', //南京新闻综合
-
-    'njjk' => 'migu/kailu/nanjingkj/50/20230719', //南京教科
-
-    'njsb' => 'migu/kailu/nanjingsb/50/20230719', //南京十八
-
-    'haxwzh' => 'wd_r2/jstv/haxinwenzonghe/600', //淮安新闻综合
-
-    'szxwzh' => 'wd_r2/jstv/szxinwenzonghe/600', //苏州新闻综合
-
-    'tz1' => 'wd_r2/jstv/tzxinwenzonghe/600', //泰州新闻综合
-
-    'xzxwzh' => 'wd_r2/jstv/xzxinwenzonghe/600', //徐州新闻综合
-
-    'sqxwzh' => 'wd_r2/jstv/sqxinwenzonghe/600', //宿迁新闻综合
-
-    'lygxwzh' => 'wd_r2/jstv/lygxinwenzonghe/600', //连云港新闻综合
-
-    'gdys' => 'wd_r1/2018/nfmedia/nfys/1000', //广东影视
-
-    'jjkt' => 'wd_r1/2018/nfmedia/jjkt/1000', //嘉佳卡通
-
-    'cbajd' => 'migu/lunbo/cba/57/20230310', //CBA经典
-
-    'gdjys' => 'wd_r4/virtuallive/5101059662/150', //掼蛋精英赛
-
-    'gqdp' => 'wd_r3/cctv/gaoqingdapian/600', //高清大片
-
-    'hpjxss' => 'migu/lunbo/zonghesports/57/20230310', //和平精英赛事
-
-    'hslbt' => 'migu/virtuallive2/5900002413/57/20210706', //红色轮播台
-
-    'hyyt' => 'wd_r2/virtuallive/5102010211/75', //华语乐坛最强音
-
-    'jddh' => 'wd_r3/cctv/jingdiandonghua/600', //经典动画大集合
-
-    'jdxgdy' => 'wd_r2/virtuallive/5100180869/150', //经典深圳旁边电影
-
-    'jsdp' => 'wd-virtuallive5100002089-150', //军事迷必看大片
-
-    'ljcwhg' => 'wd_r2/virtuallive/5102010211/75', //历届春晚回顾
-
-    'mg24hty' => 'wd_r2/virtuallive/tysy201903/150', //咪咕24小时体育
-
-    'mglbt' => 'migu/lunbo/eufootball/57/20230310', /轮播台
-
-    'nbajd' => 'migu/lunbo/nba/57/20230310', //NBA经典
-
-    'ozzqfy' => 'migu/lunbo/eufootball/57/20230310', //欧洲足球风云
-
-    'qmpp' => 'migu/lunbo/pingpang/57/20230310', //全民乒乓
-
-    'rjlb' => 'wd_r3/cctv/rejulianbo/600', //热剧联播
-
-    'sszjd' => 'wd_r3/cctv/saishijingdian/600', //赛事最经典
-
-    'ttmlh' => 'wd_r3/cctv/titanminglan/600', //体坛名栏汇
-
-    'ufcgdjx' => 'migu/lunbo/ufc/57/20230310', //UFC格斗精选
-
-    'wdlsjd' => 'migu/lunbo/wudaliansai/57/20230310', //五大联赛经典
-
-    'xpfyt' => 'wd-virtuallive5100030975-150', //新片放映厅
-
-    'yxlmss' => 'migu/lunbo/quanmin/57/20230310', //英雄联盟赛事
-
-    'zjlxc' => 'wd_r3/virtuallive/5100170828/75', //周杰伦现场
-
-    'zqzyp' => 'wd_r3/cctv/zuiqiangzongyi/600', //最强综艺趴
-
-    'xmhd' => 'ws_x/2018/xiongmao/HD/2000', //熊猫频道01高清
-
-    'xm1' => 'envivo_x/2018/SD/xiongmao01/1000', //熊猫频道1
-
-    'xm2' => 'envivo_x/2018/SD/xiongmao02/1000', //熊猫频道2
-
-    'xm3' => 'envivo_x/2018/SD/xiongmao03/1000', //熊猫频道3
-
-    'xm4' => 'envivo_x/2018/SD/xiongmao04/1000', //熊猫频道4
-
-    'xm5' => 'envivo_x/2018/SD/xiongmao05/1000', //熊猫频道5
-
-    'xm6' => 'envivo_x/2018/SD/xiongmao06/1000', //熊猫频道6
-
-    'xm7' => 'envivo_x/2018/SD/xiongmao07/1000', //熊猫频道7
-
-    'xm8' => 'envivo_x/2018/SD/xiongmao08/1000', //熊猫频道8
-
-    'xm9' => 'envivo_x/2018/SD/xiongmao09/1000', //熊猫频道9
-
-    'xm10' => 'envivo_x/2018/SD/xiongmao10/1000', //熊猫频道10
-
-];
-
-
-$id = $_GET['id'];
-
-
-if (array_key_exists($id, $n)) {
-
-
-    $url = "http://lr1.aikan.miguvideo.com/".$n[$id]."/index.m3u8?msisdn=&encrypt=";
-
-    header('Location: '.$url);
-
-    exit;
-
-} else {
-
-    echo "Invalid id parameter";
-
+$channel_ids = array(
+    'cctv1' => 'c74966f7109bc090b8b9f234bec5884f', // CCTV1
+    'cctv2' => '1434bac241017d9eb89485bc80491bf6', // CCTV2
+    'cctv3' => '5099c074952bff8ba34c81acbaa33ea7', // CCTV3    
+    'cctv4' => 'db976f7874fa07b13dff464bd707b0f2', // CCTV4
+    'cctv5' => '76d49a7fe74ad80d13a65e566fbaff03', // CCTV5
+    'cctv5jia' => '49ffa6abb7be07ff004933081062887a', // CCTV5+
+    'cctv6' => '9c33ef39a294f72a3913b1fddc93f9f7', // CCTV6
+    'cctv7' => '998130516f61f987a32f5b05e9058ee9', // CCTV7
+    'cctv8' => '58b791dae3e0541536bd15d22419bf65', // CCTV8
+    'cctv9' => 'a48b656035c62d77e272ea987b5690f6', // CCTV9
+    'cctv10' => '50c2aba67e0291cd497bf36f377fbbff', // CCTV10
+    'cctv11' => '69f3e78a39ec1f0d65f2ddb8d98a12a6', // CCTV11
+    'cctv12' => '6a822ccee011fee0d96a46bed23bf8d6', // CCTV12
+    'cctv13' => '7619bb0ac390807471fc508a34eeea40', // CCTV13
+    'cctv14' => '6c55832ac08e5223cbf79aac6dec5d98', // CCTV14
+    'cctv15' => '452cc8ca57be9f52bfd55f60de90d02c', // CCTV15
+    'cctv17' => '4a755c47b7a7321bd9edcefce8923e16', // CCTV17
+    'cctv4mei' => '45de6fabfc0d9dfd41de6ad5022d8fce', // CCTV4美洲
+    'cctv4ou' => '66e1470c453536359985b7b9b8222742', // CCTV4欧洲
+    'cgtndj' => '2b367141a90690336f104070714145c9', // CGTN纪录
+    'cgtndy' => 'ee049d44093ce170db64b51eac1d2f78', // CGTN阿拉伯语
+    'cgtneb' => '3c4159bb5d8e37eed4f459dd2d270871', // CGTN西班牙语
+    'cgtnfy' => 'ca968e30d75e97aee66814d079acd6fd', // CGTN法语
+    'cgtney' => '65c5ecaf4809d2ecadab18660c3ac6eb', // CGTN俄语
+    'lgsg' => '70cf3f0edac1667cd62bf1186e45f206', // 老故事
+    'fxzj' => '6f19caa8cc3798293fb98195ece4c1e6', // 发现之旅
+    'zxs' => '75fe4a331b8f71e5638eec115904f943', // 中学生
+    'dfws' => '50d94286a91a54aa991d852b86a3ec88', // 东方卫视
+    'jsws' => '1929b19850d7a3046952b8d9bd198b23', // 江苏卫视
+    'gdws' => 'ce95a4ed1526e2d1e6c4629a20682f2f', // 广东卫视
+    'jxws' => '72e0faff01af71d26ea8ba4c62d4c23e', // 江西卫视
+    'hns' => '30fcb62a15de6e22fbc4efde97cb6791', // 河南卫视
+    'sxs' => 'ff120dae8b23e2cb5a7b8c7c65bd4123', // 陕西卫视
+    'dqyws' => '414ce03a3640f44a4db96f6d485be5dc', // 大湾区卫视
+    'hbs' => '87759623cbae83d727b06f6f0040c71d', // 湖北卫视
+    'jlws' => '631c36ff41a50d7a9891023938d7359d', // 吉林卫视
+    'qhs' => 'e5007c41aa833a230096acbaa762b5b9', // 青海卫视
+    'dnws' => 'e1f45a56760a590902a1a2ef4859667f', // 东南卫视
+    'hnsj' => 'b756ac65ac87ef1a7f622bbaaede61ad', // 海南卫视
+    'hxws' => '98395285f1edf12ae051f6e22728faca', // 海峡卫视
+    'yxfy' => '4403927ae89dbd01ffe02435d43ccb04', // 游戏风云
+    'sszjd' => '61173763da81b7fd481c139cd937baa4', // 赛事最经典
+    'ttmjh' => '1856b9463ef16955a84bdcb5d228a705', // 体坛名栏汇
+    'shdy' => '7ac18dfabc3748a867e2dc5d3e5a2cf0', // 四海钓鱼
+    'mg24ss' => 'a09b6f2eb7db171693f6636d9c62449c', // 咪咕24小时体育台
+    'xpfft' => '15d1c8a8183b145e6745be48d7059f76', // 新片放映厅
+    'zjsgn' => '44a344a64dc596ddcf881cafb07ea0bd', // 追剧少女
+    'chcjy' => 'e6895ae6ea914ba368da69e487408ecd', // CHC家庭影院
+    'chcdx' => '3247643c60213697372e32d226c8478a', // CHC动作电影
+    'rjlb' => '046fd4eaec6d314a4982fc4172cba1cb', // 热剧联播
+    'gdp' => '332b32f046c3b56d5f2b46b195f1e02d', // 高清大片
+    'mgysy' => '008c639dafcd273f4000ce8bcbce45f9', // 咪咕云上电影院
+    'jsjy' => 'ee28a5df59d890bf587bef808ba74bd4', // 江苏教育
+    'sdjy' => 'cd6c31618254f5c2aad8333bc2e3502e', // 山东教育
+    'xmpdgt' => 'a55d5f8ab3b8842010392956097c991b', // 熊猫频道高清
+    'xmpd1' => 'b8e11cd84e1d5499396d0e0490ae64e1', // 熊猫频道1
+    'xmpd2' => '2162d220637a98d7f7eb2e2bd805ec9e', // 熊猫频道2
+    'xmpd3' => '0469f423ebaf7a3ade269dcc87121f58', // 熊猫频道3
+    'xmpd4' => '25505275d0c1a786d886b68cd8af56f5', // 熊猫频道4
+    'xmpd5' => '59ae2678f9fa0c2fc411b2830ec45bd2', // 熊猫频道5
+    'xmpd6' => 'd451ec9b7b06cf6c004fcfdc62ced933', // 熊猫频道6
+    'xmpd7' => 'c4382c98e155adb1e474f027288d5919', // 熊猫频道7
+    'xmpd8' => '23131da84b625220c07232ae17d67d00', // 熊猫频道8
+    'xmpd9' => '3bd5ca39cf59f5766ee6fd2e4af5645c', // 熊猫频道9
+    'xmpd10' => 'cdfe84bb4e5336529b9ed93c43e357d7', // 熊猫频道10
+    'ypjy' => '017ef627d5468a6c50491c559ed64ed7', // Y+
+    'ssxwzh' => 'f77dcfe77101c1e564f29fec9e1ab4a7', // 嵊泗新闻综合
+    'ptds' => '7a44b203aa4d4aab2f4485c818a16157', // 普陀电视台
+    'hzzh' => '1fd79da6a57f5d4a4873ef446fca278d', // 杭州综合
+    'hzxhmm' => '741b500636fcae187d092162c40b8406', // 杭州西湖明珠
+    'hzshgq' => '2a547789f6b782394fb20f3adef2f9af', // 杭州生活高清
+    'hzys' => 'b46acd33cd3059ff2d4dc4ebecfabcd1', // 杭州影视
+    'hzet' => 'ae798c1af22b8f51f4b99eb82968383', // 杭州少儿
+    'qzggpd' => 'ebee4991bd7da2a07f23e847a99817a6', // 衢州公共频道
+);
+$channel = isset($_GET['id']) ? $_GET['id'] : 'cctv6';
+if (array_key_exists($channel, $channel_ids)) {
+    $id = $channel_ids[$channel];
+    $u = "http://aikanvod.miguvideo.com/video/p/live.jsp?user=guest&channel=$id&isEncrypt=1";
+    $c = @file_get_contents($u);
+    
+    if ($c !== false && preg_match('/source src="(.+?)"/', $c, $m)) {
+        header('Access-Control-Allow-Origin: *');
+        header('Location: ' . $m[1]);
+        exit;
+    }
 }
-
-
+header('HTTP/1.0 404 Not Found');
+echo '未找到指定频道';
 ?>
+
+/*  可能有的看不了，提示要去咪咕爱看的app看，如CCTV1、CCTV2，先留着，将来也许能看。
+CCTV1,http://localhost/mg.php?id=cctv1
+CCTV2,http://localhost/mg.php?id=cctv2
+CCTV3,http://localhost/mg.php?id=cctv3
+CCTV4,http://localhost/mg.php?id=cctv4
+CCTV5,http://localhost/mg.php?id=cctv5
+CCTV5+,http://localhost/mg.php?id=cctv5jia
+CCTV6,http://localhost/mg.php?id=cctv6
+CCTV7,http://localhost/mg.php?id=cctv7
+CCTV8,http://localhost/mg.php?id=cctv8
+CCTV9,http://localhost/mg.php?id=cctv9
+CCTV10,http://localhost/mg.php?id=cctv10
+CCTV11,http://localhost/mg.php?id=cctv11
+CCTV12,http://localhost/mg.php?id=cctv12
+CCTV13,http://localhost/mg.php?id=cctv13
+CCTV14,http://localhost/mg.php?id=cctv14
+CCTV15,http://localhost/mg.php?id=cctv15
+CCTV17,http://localhost/mg.php?id=cctv17
+CCTV4美洲,http://localhost/mg.php?id=cctv4mei
+CCTV4欧洲,http://localhost/mg.php?id=cctv4ou
+CGTN纪录,http://localhost/mg.php?id=cgtndj
+CGTN阿拉伯语,http://localhost/mg.php?id=cgtndy
+CGTN西班牙语,http://localhost/mg.php?id=cgtneb
+CGTN法语,http://localhost/mg.php?id=cgtnfy
+CGTN俄语,http://localhost/mg.php?id=cgtney
+老故事,http://localhost/mg.php?id=lgsg
+发现之旅,http://localhost/mg.php?id=fxzj
+中学生,http://localhost/mg.php?id=zxs
+东方卫视,http://localhost/mg.php?id=dfws
+江苏卫视,http://localhost/mg.php?id=jsws
+广东卫视,http://localhost/mg.php?id=gdws
+江西卫视,http://localhost/mg.php?id=jxws
+河南卫视,http://localhost/mg.php?id=hns
+陕西卫视,http://localhost/mg.php?id=sxs
+大湾区卫视,http://localhost/mg.php?id=dqyws
+湖北卫视,http://localhost/mg.php?id=hbs
+吉林卫视,http://localhost/mg.php?id=jlws
+青海卫视,http://localhost/mg.php?id=qhs
+东南卫视,http://localhost/mg.php?id=dnws
+海南卫视,http://localhost/mg.php?id=hnsj
+海峡卫视,http://localhost/mg.php?id=hxws
+游戏风云,http://localhost/mg.php?id=yxfy
+赛事最经典,http://localhost/mg.php?id=sszjd
+体坛名栏汇,http://localhost/mg.php?id=ttmjh
+四海钓鱼,http://localhost/mg.php?id=shdy
+咪咕24小时体育台,http://localhost/mg.php?id=mg24ss
+新片放映厅,http://localhost/mg.php?id=xpfft
+追剧少女,http://localhost/mg.php?id=zjsgn
+CHC家庭影院,http://localhost/mg.php?id=chcjy
+CHC动作电影,http://localhost/mg.php?id=chcdx
+热剧联播,http://localhost/mg.php?id=rjlb
+高清大片,http://localhost/mg.php?id=gdp
+咪咕云上电影院,http://localhost/mg.php?id=mgysy
+江苏教育,http://localhost/mg.php?id=jsjy
+山东教育,http://localhost/mg.php?id=sdjy
+熊猫频道高清,http://localhost/mg.php?id=xmpdgt
+熊猫频道1,http://localhost/mg.php?id=xmpd1
+熊猫频道2,http://localhost/mg.php?id=xmpd2
+熊猫频道3,http://localhost/mg.php?id=xmpd3
+熊猫频道4,http://localhost/mg.php?id=xmpd4
+熊猫频道5,http://localhost/mg.php?id=xmpd5
+熊猫频道6,http://localhost/mg.php?id=xmpd6
+熊猫频道7,http://localhost/mg.php?id=xmpd7
+熊猫频道8,http://localhost/mg.php?id=xmpd8
+熊猫频道9,http://localhost/mg.php?id=xmpd9
+熊猫频道10,http://localhost/mg.php?id=xmpd10
+Y+,http://localhost/mg.php?id=ypjy
+嵊泗新闻综合,http://localhost/mg.php?id=ssxwzh
+普陀电视台,http://localhost/mg.php?id=ptds
+杭州综合,http://localhost/mg.php?id=hzzh
+杭州西湖明珠,http://localhost/mg.php?id=hzxhmm
+杭州生活高清,http://localhost/mg.php?id=hzshgq
+杭州影视,http://localhost/mg.php?id=hzys
+杭州少儿,http://localhost/mg.php?id=hzet
+衢州公共频道,http://localhost/mg.php?id=qzggpd
+*/
