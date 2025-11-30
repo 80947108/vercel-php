@@ -5,25 +5,23 @@ $channels = [
 "CCTV1" => "https://zby.130519.xyz/PLTV/11/224/3221225673/index.m3u8",//CCTV1
 "CCTV2" => "https://zby.130519.xyz/PLTV/11/224/3221226122/index.m3u8",//CCTV2
 "CCTV3" => "https://zby.130519.xyz/PLTV/11/224/3221225766/index.m3u8",//CCTV3
-"CCTV4" => "http://jilin-02.tosunsoft.com:35455/mgtv/631780421.m3u8",//CCTV4
+"CCTV4" => "https://zby.130519.xyz/PLTV/11/224/3221226124/index.m3u8",//CCTV4
 "CCTV4-1" => "https://zby.130519.xyz/PLTV/11/224/3221226124/index.m3u8",//CCTV4
 "CCTV5" => "https://zby.130519.xyz/PLTV/11/224/3221225734/index.m3u8",//CCTV5
-"CCTV5+" => "http://jilin-02.tosunsoft.com:35455/mgtv/641886773.m3u8",//CCTV5+
+"CCTV5+" => "http://175.10.173.142:10999/tsfile/live/0016_2.m3u8",//CCTV5+
 "CCTV6" => "https://zby.130519.xyz/PLTV/11/224/3221225741/index.m3u8",//CCTV6
 "CCTV7" => "https://zby.130519.xyz/PLTV/11/224/3221225701/index.m3u8",//CCTV7
 "CCTV8" => "https://zby.130519.xyz/PLTV/11/224/3221225736/index.m3u8",//CCTV8
-"CCTV9" => "http://jilin-02.tosunsoft.com:35455/mgtv/673168140.m3u8",//CCTV9
+"CCTV9" => "http://175.10.173.142:10999/tsfile/live/0009_1.m3u8",//CCTV9
 "CCTV10" => "https://zby.130519.xyz/PLTV/11/224/3221225743/index.m3u8",//CCTV10
-"CCTV11" => "http://jilin-02.tosunsoft.com:35455/mgtv/667987558.m3u8",//CCTV11
+"CCTV11" => "https://zby.130519.xyz/PLTV/11/224/3221226101/index.m3u8",//CCTV11
 "CCTV12" => "https://zby.130519.xyz/PLTV/11/224/3221226101/index.m3u8",//CCTV12
 "CCTV13" => "https://zby.130519.xyz/PLTV/11/224/3221226128/index.m3u8",//CCTV13
 "CCTV14" => "https://zby.130519.xyz/PLTV/11/224/3221225738/index.m3u8",//CCTV14
 "CCTV15" => "https://zby.130519.xyz/PLTV/11/224/3221226147/index.m3u8",//CCTV15
 "CCTV16" => "https://zby.130519.xyz/PLTV/11/224/3221226120/index.m3u8",//CCTV16
-"CCTV17" => "http://jilin-02.tosunsoft.com:35455/mgtv/673168256.m3u8",//CCTV17
-"CCTV1-1" => "https://live.junhao.mil.cn/rmt9502/3e6e7c5477314ec38f5e58e2a5c70024.m3u8?txSecret=57978fafb9c19880afa5c8687e8241d8&txTime=7A42BAFF",//CCTV1
-"CCTV1-2" => "https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream05/streamPlaylist.m3u8?",//CCTV1
-"CCTV13-1" => "http://tencentplaygsm.gztv.com/live/jingsai.m3u8",//CCTV13
+"CCTV17" => "http://175.10.173.142:10999/tsfile/live/0016_1.m3u8",//CCTV17
+
 
 
 "BEIJINGWS" => "http://my.tmos.cn:15181/chs002.m3u8",//北京卫视
@@ -52,21 +50,21 @@ $channels = [
 "XKWS" => "http://iot-mqqt.111yao.cn:8080/live/diyp_xingkong.m3u8",//星空卫视
 "XKGJ" => "http://iot-mqqt.111yao.cn:8080/live/diyp_starmovies.m3u8",//星空国际
 "XKYY" => "http://iot-mqqt.111yao.cn:8080/live/diyp_channelv.m3u8",//星空音乐
-"SSDY" => "http://120.76.248.139/live/lunbo/ssdy.m3u8",//邵氏电影
+"SSDY" => "http://38.75.136.137:98/gslb/dsdqpub/lbssdy.m3u8?auth=testpub",//邵氏电影
+"SSWX" => "http://38.75.136.137:98/gslb/dsdqpub/lbsswx.m3u8?auth=testpub",//邵氏武侠
 "XGSJ" => "http://ali.hlspull.yximgs.com/live/zxcvbnm9852.flv",//星光视界
-"CWJD" => "http://push-rtmp-hs-spe-f5.douyincdn.com:80/live/awei_cwjd.flv",//重温经典
-"CWJD1" => "https://gdcucc.v1.mk/gdcucc/cwjd.m3u8",//重温经典
-"CWJD2" => "http://cdn3.163189.xyz/live/cwjd/stream.m3u8",//重温经典
-"CWJD3" => "http://cdn3.132.us.kg/live/cwjd/stream.m3u8",//重温经典
-"CWJD4" => "https://live.cdn.com.mp/live/cwjd/stream.m3u8",//重温经典
+"CWJD" => "https://cdn6.101.qzz.io:443/163189/cwjd",//重温经典
+"CWJD1" => "https://other.ottiptv.cc/cwjd.m3u8",//重温经典
+"CWJD2" => "http://8.138.7.223/tv/cwjd.php",//重温经典
 "FCT" => "http://erp.giihgtidg.com:8080/live/jade01.m3u8",//翡翠台
-"FHZW" => "http://203.205.191.53/qctv.fengshows.cn/live/0701pcc72.flv",//凤凰中文
-"FHZX" => "http://203.205.191.53/qctv.fengshows.cn/live/0701pin72.flv",//凤凰资讯
-"FHXG" => "http://203.205.191.53/qctv.fengshows.cn/live/0701phk72.flv",//凤凰香港
+"FHZW" => "http://43.152.143.193:80/1.v.smtcdns.net/tvlive.fengshows.cn/live/0701pcc72.flv",//凤凰中文
+"FHZX" => "http://43.152.143.193:80/1.v.smtcdns.net/tvlive.fengshows.cn/live/0701pin72.flv",//凤凰资讯
+"FHXG" => "http://43.152.143.193:80/1.v.smtcdns.net/tvlive.fengshows.cn/live/0701phk72.flv",//凤凰香港
 "LHWS" => "http://1033946631.cloudvdn.com/a.m3u8?domain=live-hdl.macaulotustv.com&player=1&streamid=lotustv:lotustv/macaulotustv&v3=1",//莲花卫视
 "LHWS1" => "http://live-hdl.macaulotustv.com/lotustv/macaulotustv.m3u8",//莲花卫视
 "LHWS2" => "http://live-hls.macaulotustv.com/lotustv/macaulotustv.m3u8",//莲花卫视
-"TYPD" => "https://hkfa.2025link.site/43rd_HK_Film_Awards/astro_celestial_movies",//天映频道
+"NOWBG" => "https://bee.946985.filegear-sg.me/nowxyt/xingyingtai.m3u8",//爆谷台
+"NOWXY" => "https://bee.946985.filegear-sg.me/nowbgt/baogutai.m3u8",//星影台
 "CGTN" => "https://0472.org/hls/cgtn.m3u8",//CGTN
 "CGTNJL" => "https://0472.org/hls/cgtnd.m3u8",//CGTN纪录
 "CGTNEY" => "https://0472.org/hls/cgtne.m3u8",//CGTN俄语
@@ -134,56 +132,6 @@ $channels = [
 "RainbowE" => "https://heyunfei.eu.org/error.mp4",//彩虹E台
 "KChannel" => "https://heyunfei.eu.org/error.mp4",//K頻道
 
-
-
-"JD1-1" => "http://218.13.167.110:9901/tsfile/live/0001_1.m3u8",//CCTV1
-"JD1-2" => "http://218.13.167.110:9901/tsfile/live/0002_1.m3u8",//CCTV2
-"JD1-3" => "http://218.13.167.110:9901/tsfile/live/0003_1.m3u8",//CCTV3
-"JD1-4" => "http://218.13.167.110:9901/tsfile/live/0004_1.m3u8",//CCTV4
-"JD1-5" => "http://218.13.167.110:9901/tsfile/live/0005_1.m3u8",//CCTV5
-"JD1-6" => "http://218.13.167.110:9901/tsfile/live/0006_1.m3u8",//CCTV6
-"JD1-7" => "http://218.13.167.110:9901/tsfile/live/0007_1.m3u8",//CCTV7
-"JD1-8" => "http://218.13.167.110:9901/tsfile/live/0008_1.m3u8",//CCTV8
-"JD1-9" => "http://218.13.167.110:9901/tsfile/live/0009_1.m3u8",//CCTV9
-"JD1-10" => "http://218.13.167.110:9901/tsfile/live/0010_1.m3u8",//CCTV10
-"JD1-11" => "http://218.13.167.110:9901/tsfile/live/0011_1.m3u8",//CCTV11
-"JD1-12" => "http://218.13.167.110:9901/tsfile/live/0012_1.m3u8",//CCTV12
-"JD1-13" => "http://218.13.167.110:9901/tsfile/live/0013_1.m3u8",//CCTV13
-"JD1-14" => "http://218.13.167.110:9901/tsfile/live/0014_1.m3u8",//CCTV14
-"JD1-15" => "http://218.13.167.110:9901/tsfile/live/0015_1.m3u8",//CCTV15
-"JD1-16" => "http://218.13.167.110:9901/tsfile/live/0016_1.m3u8",//浙江卫视
-"JD1-17" => "http://218.13.167.110:9901/tsfile/live/0017_1.m3u8",//吉林卫视
-"JD1-18" => "http://218.13.167.110:9901/tsfile/live/0018_1.m3u8",//辽宁卫视
-"JD1-19" => "http://218.13.167.110:9901/tsfile/live/0019_1.m3u8",//黑龙江卫视
-"JD1-20" => "http://218.13.167.110:9901/tsfile/live/0139_1.m3u8",//河南卫视
-"JD1-21" => "http://218.13.167.110:9901/tsfile/live/0109_1.m3u8",//内蒙古卫视
-"JD1-22" => "http://218.13.167.110:9901/tsfile/live/1000_1.m3u8",//海南卫视
-"JD1-23" => "http://218.13.167.110:9901/tsfile/live/1001_1.m3u8",//广东体育
-"JD1-24" => "http://218.13.167.110:9901/tsfile/live/0113_1.m3u8",//广西卫视
-"JD1-25" => "http://218.13.167.110:9901/tsfile/live/0119_1.m3u8",//云南卫视
-"JD1-26" => "http://218.13.167.110:9901/tsfile/live/0138_1.m3u8",//江西卫视
-"JD1-27" => "http://218.13.167.110:9901/tsfile/live/0118_1.m3u8",//山西卫视
-"JD1-28" => "http://218.13.167.110:9901/tsfile/live/0117_1.m3u8",//河北卫视
-"JD1-29" => "http://218.13.167.110:9901/tsfile/live/0140_1.m3u8",//青海卫视
-"JD1-30" => "http://218.13.167.110:9901/tsfile/live/0141_1.m3u8",//甘肃卫视
-"JD1-31" => "http://218.13.167.110:9901/tsfile/live/0136_1.m3u8",//陕西卫视
-"JD1-32" => "http://218.13.167.110:9901/tsfile/live/1002_1.m3u8",//广东影视
-"JD1-33" => "http://218.13.167.110:9901/tsfile/live/1003_1.m3u8",//广东珠江
-"JD1-34" => "http://218.13.167.110:9901/tsfile/live/0125_1.m3u8",//广东卫视
-"JD1-35" => "http://218.13.167.110:9901/tsfile/live/1004_1.m3u8",//深圳都市
-"JD1-36" => "http://218.13.167.110:9901/tsfile/live/0122_1.m3u8",//北京卫视
-"JD1-37" => "http://218.13.167.110:9901/tsfile/live/0107_1.m3u8",//上海卫视
-"JD1-38" => "http://218.13.167.110:9901/tsfile/live/0135_1.m3u8",//天津卫视
-"JD1-39" => "http://218.13.167.110:9901/tsfile/live/0142_1.m3u8",//重庆卫视
-"JD1-40" => "http://218.13.167.110:9901/tsfile/live/0127_1.m3u8",//江苏卫视
-"JD1-41" => "http://218.13.167.110:9901/tsfile/live/0128_1.m3u8",//湖南卫视
-"JD1-42" => "http://218.13.167.110:9901/tsfile/live/0120_1.m3u8",//贵州卫视
-"JD1-43" => "http://218.13.167.110:9901/tsfile/live/0130_1.m3u8",//安徽卫视
-"JD1-44" => "http://218.13.167.110:9901/tsfile/live/0123_1.m3u8",//四川卫视
-"JD1-45" => "http://218.13.167.110:9901/tsfile/live/1006_1.m3u8",//广东少儿
-"JD1-46" => "http://218.13.167.110:9901/tsfile/live/0131_1.m3u8",//山东卫视
-"JD1-47" => "http://218.13.167.110:9901/tsfile/live/0132_1.m3u8",//湖北卫视
-"JD1-48" => "http://218.13.167.110:9901/tsfile/live/0126_1.m3u8",//深圳卫视
 
 
 
