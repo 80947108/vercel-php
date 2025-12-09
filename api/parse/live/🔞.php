@@ -517,7 +517,8 @@ if (array_key_exists($id, $channels)) {
     exit; // 确保重定向后停止执行
 } else {
     // 如果没有找到频道，跳转到指定链接 abc
-    header('Location: https://heyunfei.eu.org/error.mp4');
+    header('Location: https://heyunfei.eu.org/tishi/playlist.m3u8');
     exit; // 确保跳转后停止执行后续代码
 }
 ?>
+
