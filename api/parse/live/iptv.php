@@ -1,5 +1,5 @@
 <?php
-// 定义频道链接
+// 勉强更新一下吧
 $channels = [
 
 "1" => "http://88b9da48.kazmazpaz.ru/iptv/MVTMCC4UTAZVDT/6182/index.m3u8",//Brazzers HD
